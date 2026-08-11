@@ -4,17 +4,33 @@ Agent skills bundled with **Xcode 27 beta 5**, packaged as a Claude Code plugin 
 
 ## Install
 
+### Any agent — `npx skills`
+
+Works for Codex, Cursor, Cline, Amp, Claude Code and ~70 more. Project scope by default, `-g` for global:
+
+```bash
+npx skills add artemnovichkov/xcode-skills          # pick interactively
+npx skills add artemnovichkov/xcode-skills --all -g # install all, globally
+```
+
+Installs to `.agents/skills/`, then links into each detected agent's own directory.
+
+### Claude Code plugin
+
 ```
 /plugin marketplace add artemnovichkov/xcode-skills
 /plugin install xcode-skills@xcode-skills
 ```
 
-Manual install (any agent that reads `~/.claude/skills`):
+### Manual
 
 ```bash
 git clone https://github.com/artemnovichkov/xcode-skills.git
-cp -R xcode-skills/skills/* ~/.claude/skills/
+cp -R xcode-skills/skills/* ~/.agents/skills/   # Codex, and most other agents
+cp -R xcode-skills/skills/* ~/.claude/skills/   # Claude Code
 ```
+
+In Codex run `/skills` or type `$` to invoke one explicitly; otherwise they trigger on description match.
 
 ## Skills
 
