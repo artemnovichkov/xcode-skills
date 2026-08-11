@@ -1,0 +1,11 @@
+{
+  "name": "xcode-skills",
+  "description": "Apple's Xcode 27 beta 5 bundled agent skills: SwiftUI, App Intents, UIKit modernization, Swift Testing, C bounds safety, security build settings, device interaction.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Artem Novichkov",
+    "url": "https://github.com/artemnovichkov"
+  },
+  "homepage": "https://github.com/artemnovichkov/xcode-skills",
+  "keywords": ["xcode", "swift", "swiftui", "app-intents", "uikit", "ios", "apple"]
+}
