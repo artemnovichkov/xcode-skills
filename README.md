@@ -1,6 +1,6 @@
 # Xcode Skills
 
-Agent skills bundled with **Xcode 27 beta 5**, packaged as a Claude Code plugin so you can use them outside Xcode.
+Agent skills bundled with **Xcode 27 beta 6**, packaged as a Claude Code plugin so you can use them outside Xcode.
 
 ## Install
 
@@ -45,8 +45,8 @@ In Codex run `/skills` or type `$` to invoke one explicitly; otherwise they trig
 | `modernize-tests` | Swift Testing adoption and XCTest migration. |
 | `adopt-c-bounds-safety` | The C `-fbounds-safety` extension: pointer annotations, adoption strategy, build settings, runtime debugging. |
 | `audit-xcode-security-settings` | Audits and progressively enables security build settings, analyzer checkers, and Enhanced Security. |
-| `device-interaction` | Verifies app behavior on device/simulator via screenshots, UI hierarchy, and touch input. |
+| `device-interaction` | Verifies app behavior on device/simulator via screenshots, UI hierarchy, touch input, and tvOS Siri Remote control. |
 
 ## Note
 
-Content is Apple's, extracted verbatim from Xcode 27 beta 5. This repo only repackages it for installation. Beta material — expect it to change in later seeds.
+Content is Apple's, extracted verbatim from Xcode 27 beta 6. This repo only repackages it for installation. Beta material — expect it to change in later seeds.
