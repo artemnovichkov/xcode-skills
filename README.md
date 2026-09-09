@@ -1,6 +1,6 @@
 # Xcode Skills
 
-Agent skills bundled with **Xcode 27 beta 6**, packaged as a Claude Code plugin so you can use them outside Xcode.
+Agent skills bundled with **Xcode 27 RC**, packaged as a Claude Code plugin so you can use them outside Xcode.
 
 ## Install
 
@@ -49,4 +49,4 @@ In Codex run `/skills` or type `$` to invoke one explicitly; otherwise they trig
 
 ## Note
 
-Content is Apple's, extracted verbatim from Xcode 27 beta 6. This repo only repackages it for installation. Beta material — expect it to change in later seeds.
+Content is Apple's, extracted verbatim from Xcode 27 RC. This repo only repackages it for installation. Beta material — expect it to change in later seeds.
