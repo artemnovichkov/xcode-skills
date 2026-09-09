@@ -5,14 +5,14 @@
     "url": "https://github.com/artemnovichkov"
   },
   "metadata": {
-    "description": "Agent skills extracted from Xcode 27 beta 6",
-    "version": "0.2.0"
+    "description": "Agent skills extracted from Xcode 27",
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "xcode-skills",
       "source": "./",
-      "description": "Apple's Xcode 27 beta 6 bundled agent skills: SwiftUI, App Intents, UIKit modernization, Swift Testing, C bounds safety, security build settings, device interaction."
+      "description": "Apple's Xcode 27 bundled agent skills: SwiftUI, App Intents, UIKit modernization, Swift Testing, C bounds safety, security build settings, accessibility audits, String Catalog translation, device interaction."
     }
   ]
 }
