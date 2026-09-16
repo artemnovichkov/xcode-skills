@@ -1,9 +1,9 @@
 ---
+description: "Coordinates translation of an Xcode project or its String Catalogs (.xcstrings) into other languages. This is the main skill to activate when asked to work on translating strings, adding languages or working with .xcstrings files. Handles the full workflow: preparing the project for a new language, fetching untranslated strings, delegating translation work, and verifying results."
+displayName: "Coordinate Translation"
 sfSymbolName: globe
 name: translation-coordinator
 user-invocable: false
-displayName: "Coordinate Translation"
-description: "Coordinates translation of an Xcode project or its String Catalogs (.xcstrings) into other languages. This is the main skill to activate when asked to work on translating strings, adding languages or working with .xcstrings files. Handles the full workflow: preparing the project for a new language, fetching untranslated strings, delegating translation work, and verifying results."
 ---
 # Localization Coordinator
 
@@ -43,10 +43,10 @@ The keys are unique identifiers to strings in this String Catalog. Use them exac
 Split the fetched strings into batches and delegate each batch to a sub-agent.
 
 1. Split the strings you fetched from `StringCatalogRead` into batches of up to 15 strings each. Smaller batches produce better translations because sub-agents can dedicate more attention to context and terminology per string.
-2. Create sub-agents for each batch. You **MUST** tell each sub-agent to use the `xcode-skills:translation` skill to translate their batch. Tell them to skip the `LocalizationPlanner` tool—you ran it for them.
+2. Create sub-agents for each batch. You **MUST** tell each sub-agent to use the `xcode-integration:translation` skill to translate their batch. Tell them to skip the `LocalizationPlanner` tool—you ran it for them.
 3. **Limit concurrency to 5 sub-agents at a time.** Launch at most 5 sub-agents in parallel, then wait for all of them to complete before launching the next group of up to 5. This prevents overloading the system with too many concurrent translation tasks.
 4. Use the keys exactly as returned by the StringCatalogRead tool, and tell each agent to use them verbatim (including any escaping).
-5. **Instruct each sub-agent to invoke the `xcode-skills:translation` Skill, and provide the target locale, the tab identifier, the String Catalog path, and the key list to them.** See the examples below for the exact format.
+5. **Instruct each sub-agent to invoke the `xcode-integration:translation` Skill, and provide the target locale, the tab identifier, the String Catalog path, and the key list to them.** See the examples below for the exact format.
 6. Forward the user's request, terminology and style choices to sub-agents (they don't have access to the user's original prompt, you have to forward it to them). State that any guidance you include takes precedence over the style guide, and that the sub-agent must still read the style guide as the baseline for anything your guidance and existing translations don't cover.
 
 
@@ -149,7 +149,7 @@ A key can appear in multiple state buckets if variants have different states.
 5. Agent divides work among subagents, prompting each subagents with the following:
 
 ============
-Translate the strings for the following keys into Japanese (ja). Skip running the `LocalizationPlanner` tool. Do NOT spawn further sub-agents. Translate only the keys listed below. Use the `xcode-skills:translation` Skill.
+Translate the strings for the following keys into Japanese (ja). Skip running the `LocalizationPlanner` tool. Do NOT spawn further sub-agents. Translate only the keys listed below. Use the `xcode-integration:translation` Skill.
 
 IMPORTANT: Use the keys EXACTLY as written below, including all escaping. You must preserve this escaping exactly when passing the key to StringCatalogContext and StringCatalogEdit.
 
@@ -179,7 +179,7 @@ key3
 3. Agent divides work among sub-agents, prompting each with the following: 
 
 ============
-Translate the strings for the following keys into Japanese (ja). Skip running the `LocalizationPlanner` tool. Do NOT spawn further sub-agents. Translate only the keys listed below. Use the `xcode-skills:translation` Skill.
+Translate the strings for the following keys into Japanese (ja). Skip running the `LocalizationPlanner` tool. Do NOT spawn further sub-agents. Translate only the keys listed below. Use the `xcode-integration:translation` Skill.
 
 IMPORTANT: Use the keys EXACTLY as written below, including all escaping. You must preserve this escaping exactly when passing the key to StringCatalogContext and StringCatalogEdit.
 
