@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Agent skills extracted from Xcode 27",
-    "version": "0.3.0"
+    "version": "0.4.0"
   },
   "plugins": [
     {
       "name": "xcode-skills",
       "source": "./",
-      "description": "Apple's Xcode 27 bundled agent skills: SwiftUI, App Intents, UIKit modernization, Swift Testing, C bounds safety, security build settings, accessibility audits, String Catalog translation, device interaction."
+      "description": "Apple's Xcode 27 bundled agent skills: SwiftUI, App Intents, UIKit modernization, app resizability, Swift Testing, C bounds safety, security build settings, accessibility audits, String Catalog translation, device interaction."
     }
   ]
 }

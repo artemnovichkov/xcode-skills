@@ -46,6 +46,7 @@ In Codex run `/skills` or type `$` to invoke one explicitly; otherwise they trig
 | `app-intents-whats-new-27` | App Intents in iOS 26/27: `supportedModes`, `SnippetIntent`, `UndoableIntent`, Visual Intelligence, Spotlight properties, syncable entities, `@AppIntent(schema:)`, `AppIntentsTesting`. |
 | `building-document-based-swiftui-applications` | The new `Document` protocol: `DocumentGroup`, readers/writers, `FileWrapper`, packages, progress, undo, migration off `FileDocument`. |
 | `uikit-app-modernization` | Replaces legacy shared-state UIKit APIs (`mainScreen`, `interfaceOrientation`, app lifecycle) with scene-aware equivalents. |
+| `app-resizability` | Adapts layouts to resizable windows and multiple windows (split screen, Stage Manager, foldables): replaces `mainScreen`, orientation, idiom, lifecycle, and safe-area assumptions. |
 | `modernize-tests` | Swift Testing adoption and XCTest migration. |
 | `adopt-c-bounds-safety` | The C `-fbounds-safety` extension: pointer annotations, adoption strategy, build settings, runtime debugging. |
 | `audit-xcode-security-settings` | Audits and progressively enables security build settings, analyzer checkers, and Enhanced Security. |
