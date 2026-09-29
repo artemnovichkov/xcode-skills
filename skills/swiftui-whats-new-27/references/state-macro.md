@@ -75,7 +75,7 @@ struct Foo: View {
 
 extension Foo {
   init(_ bar: Int, baz: Int) {
-    self.init(bar: bar, baz) // error
+    self.init(bar: bar, baz: baz) // error
   }
 }
 ```
