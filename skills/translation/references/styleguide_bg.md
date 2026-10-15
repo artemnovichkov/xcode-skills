@@ -25,10 +25,10 @@
 
 ## Abbreviations
 
-- **Avoid Abbreviations in UI Strings**: Do not shorten words through abbreviations to fit space constraints — instead reword the string. Only use Вкл. and Изкл. for on/off UI toggles, and и др. only when space does not allow и други.
+- **Avoid Abbreviations in UI Strings**: Keep the full spelled-out form by default; abbreviate only when the source itself uses an abbreviation or the translation is found to be clipped or truncated. When abbreviating, use the commonly accepted Bulgarian equivalent. Вкл. and Изкл. are the accepted short forms for on/off UI toggles; use и др. for a source "etc." and и други for a spelled-out "and others".
   - *Source:* "On / Off" → *Target:* "Вкл. / Изкл."
 
-- **Day-of-Week Abbreviations**: When space is very tight use single capitalized Cyrillic letters for days of the week. When slightly more space is available use the two-letter capitalized abbreviation forms. Note that the single-letter forms are positional only — П covers both Понеделник and Петък, С covers both Сряда and Събота — so they only disambiguate within an ordered weekday row.
+- **Day-of-Week Abbreviations**: Use the two-letter capitalized abbreviation forms for days of the week; use single capitalized Cyrillic letters only when the two-letter forms are found to be clipped or truncated. Note that the single-letter forms are positional only — П covers both Понеделник and Петък, С covers both Сряда and Събота — so they only disambiguate within an ordered weekday row.
   - *Source:* "Mon Tue Wed Thu Fri Sat Sun" (single-letter form) → *Target:* "П В С Ч П С Н"
   - *Source:* "Mon Tue Wed Thu Fri Sat Sun" (two-letter form) → *Target:* "Пн Вт Ср Чт Пт Сб Нд"
 
@@ -69,7 +69,7 @@
 
 ## Measurements
 
-- **Do Not Convert Units; Use Latin SI Symbols**: Never convert measurement units (e.g. inches to centimetres). Bulgaria follows the SI system, which uses Latin-character unit symbols — do not use Cyrillic equivalents. Use a non-breaking space between the numerical value and the unit symbol; exceptions are the percent and degree signs.
+- **Do Not Convert Units; Use Latin SI Symbols**: Do not convert measurement units (e.g. inches to centimeters). Bulgaria follows the SI system, which uses Latin-character unit symbols — do not use Cyrillic equivalents. Use a non-breaking space between the numerical value and the unit symbol; exceptions are the percent and degree signs.
   - *Source:* "2.5 GB" → *Target:* "2,5 GB"
   - *Source:* "0.45" → *Target:* "0,45"
 

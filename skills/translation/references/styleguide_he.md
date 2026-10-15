@@ -11,12 +11,12 @@
 ## Addressing Users
 
 - **Use Gender-Neutral Forms When Addressing the User**: Because it is often ambiguous whether a string addresses the user or instructs the device, and because Hebrew grammatical gender is pervasive, default to gender-neutral constructions. Preferred strategies include present-tense participle verbs, second-person past-tense homographs, modal forms (באפשרותך, ניתן, יש ל-), and gerunds. Avoid hybrid slash forms (י/הקש) as they are not truly inclusive and are not read correctly by VoiceOver.
-  - *Source:* "Save" → *Target:* "שמירה (gerund) or לשמור באפשרותך (modal)"
+  - *Source:* "Save" → *Target:* "שמירה" (gerund) or "לשמור באפשרותך" (modal)
 
 ## Abbreviations
 
-- **Avoid Abbreviations; Reword Instead**: Abbreviations should be a last resort when a string is too long. Preferred fixes are rewording the translation for conciseness or filing a localizability bug. When abbreviation is unavoidable, use the geresh (׳) as the standard abbreviation marker, as is conventional in Hebrew writing.
-  - *Source:* "by / number (abbreviated)" → *Target:* "ע״י / מס׳"
+- **Avoid Abbreviations; Reword Instead**: Prefer the full form, but keep any abbreviation the source itself uses. When the translation is found to be clipped or truncated, first try rewording for concision, and abbreviate only if rewording can't make it fit. When abbreviating, use the geresh (׳) as the standard abbreviation marker, as is conventional in Hebrew writing.
+  - *Source:* "etc." → *Target:* "וכו׳"
 
 ## Acronyms
 
@@ -31,12 +31,11 @@
 
 ## Measurements
 
-- **Do Not Convert Measurement Units**: Keep the unit system from the source; do not convert inches to centimeters or vice versa. Do not use the gershayim character (״) as an abbreviation for inches — it is reserved for abbreviations and quotations in Hebrew.
+- **Do Not Convert Measurement Units**: Generally, keep the unit system from the source; do not convert inches to centimeters or vice versa. Do not use the gershayim character (״) as an abbreviation for inches — it marks Hebrew abbreviations and quotations, so it cannot double as a unit mark. Hebrew has native names for most units; use the unit name rather than a mark.
 
 ## Names And Addresses
 
-- **Use Israeli Sample Names and Realistic Address Mix**: Replace generic placeholders (John/Jane Doe) with ישראל/ישראלה ישראלי. When multiple sample names are needed, include a realistic mix that reflects Israel's diverse population — include minority names and names representing a range of genders. City names in sample addresses should be fictional.
-  - *Source:* "John Doe / Jane Doe" → *Target:* "ישראל ישראלי / ישראלה ישראלי"
+- **Use Israeli Sample Names and Realistic Address Mix**: Replace a generic placeholder (John/Jane Doe) with the Israeli everyman name ישראל/ישראלה ישראלי. If the source or the developer's comment indicates the name refers to a specific, real individual (rather than a generic placeholder), keep that person's actual name. When multiple sample names are needed, include a realistic mix that reflects Israel's diverse population — include minority names and names representing a range of genders. City names in sample addresses should be fictional.
 
 ## Numerals
 
@@ -50,7 +49,7 @@
   - *Source:* "the iPhone" → *Target:* "ה-iPhone (hyphen, no spaces)"
 
 - **Gerunds for Menu and Command Names**: Menu names should be translated as nouns or gerunds (e.g., קובץ, שיתוף, הוספה). Command names inside menus or action buttons should also use gerund forms. Avoid infinitive-only forms, which can seem grammatically incomplete and create ambiguity about who is performing the action.
-  - *Source:* "Edit (menu name)" → *Target:* "עריכה"
+  - *Source:* "Edit" (menu name) → *Target:* "עריכה"
   - *Source:* "Print / Install" → *Target:* "הדפסה / התקנה"
 
 - **No Comma Before Final List Item**: Hebrew rarely uses a serial comma before the last item in a list. Omit the comma unless the list items are so long or syntactically complex that the comma is needed to delimit the final item clearly.
@@ -60,7 +59,7 @@
   - *Source:* "Turn off your device" → *Target:* "יש לכבות את המכשיר (no need for שלך)"
 
 - **Use Plene (Fuller) Spelling**: The Hebrew Language Academy recommends the 'fuller' spelling (כתיב מלא) as it is easier to read and leaves less ambiguity. Adopt fuller spellings in all new translations.
-  - *Source:* "was (female)" → *Target:* "הייתה (preferred over היתה)"
+  - *Source:* "was" (female) → *Target:* "הייתה" (preferred over "היתה")
 
 ## Punctuation
 
@@ -99,4 +98,4 @@
   - *Source:* "the blind" → *Target:* "אנשים עם עיוורון או לקות ראייה"
 
 - **Use Diverse and Inclusive Example Names**: When sample names are required, include names representing a variety of ethnicities and genders found in Israel's diverse population. Prefer gender-neutral names (טל, אור) where appropriate, and include minority names alongside common ones. Ensure a mix of ages is represented.
-  - *Source:* "John / Jane Doe (multiple names)" → *Target:* "Examples: דימה, מוחמד, פנטה, נביל, רבקה, מיה"
+  - *Source:* "John / Jane Doe" (multiple names) → *Target:* "דימה, מוחמד, פנטה, נביל, רבקה, מיה"

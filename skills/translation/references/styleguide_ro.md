@@ -106,7 +106,8 @@
 
 ## Measurements
 
-- **Do Not Convert Measurements**: Do not convert measurements (e.g. inches to centimeters) — keep the source unit and match the source's level of precision. A unit symbol is not followed by a period and is separated from the number by a non-breaking space (also for % and °C/°F).
+- **Do Not Convert Measurements**: Generally, do not convert measurements (e.g. inches to centimeters) — keep the source unit. Where the source unit is imperial, add a metric equivalent in parentheses after it, rounded so it claims no more precision than the source does: an approximate source figure takes an approximate conversion. A unit symbol is not followed by a period and is separated from the number by a non-breaking space (also for % and °C/°F).
+  - *Source:* "Your device needs to be within 30 feet of your computer." → *Target:* "Dispozitivul trebuie să se afle la maximum 30 de picioare (aprox. 9 metri) de computer." (not "9,14 metri")
   - *Source:* "2 GB / 30 min / 25 °C" → *Target:* "2 GB / 30 min / 25 °C" (non-breaking space between each value and its unit)
 
 ## Numerals

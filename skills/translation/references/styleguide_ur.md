@@ -40,9 +40,9 @@
   - *Source:* "10:18:35" → *Target:* "10:18:35" (colon separator; international numerals)
   - *Source:* "10 o\u2019clock" → *Target:* "10 بجے" (no پر after time when بجے present)
 
-## Measurements
+## Measurements and Units
 
-- **Do Not Convert Measurement Units**: Never convert imperial to metric or vice versa. Unit abbreviations stay in English to avoid truncation. CLDR exceptions apply (e.g. millimeters = ملی میٹر; unit plurals written singular, kilocalories = کلو کیلوری).
+- **Do Not Convert Measurement Units**: Generally, do not convert imperial to metric or vice versa. Unit abbreviations stay in English to avoid truncation. CLDR exceptions apply (e.g. millimeters = ملی میٹر; unit plurals written singular, kilocalories = کلو کیلوری).
   - *Source:* "10 KB" → *Target:* "10 KB" (follow source spacing)
   - *Source:* "6 ft" → *Target:* "6 ft" (do not convert to metric)
 

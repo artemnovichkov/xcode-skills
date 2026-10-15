@@ -36,10 +36,12 @@
 
 ## Measurements
 
-- **Convert Imperial to Metric; Use Non-Breaking Space**: Convert descriptive or incidental imperial measurements to metric (e.g., inches to centimeters) when they appear in sentences. Exception: keep product display and screen sizes in inches (colių), matching Apple's shipped Lithuanian conventions. Never use the double-quote symbol as an abbreviation for inch. Separate the numerical value from the unit symbol with a non-breaking space.
-  - *Source:* "100 m" → *Target:* "100 m"
-  - *Source:* "30 min." → *Target:* "30 min."
-  - *Source:* "13-inch display" → *Target:* "13 colių ekranas" (display size stays in inches)
+- **Convert Imperial to Metric; Use Non-Breaking Space**: Convert imperial measurements to metric (e.g., inches to centimeters) when they appear in sentences or phrases. Never use a quotation mark as an abbreviation for inch; use the abbreviation `in` or the word `colis` instead. Separate the numerical value from the unit symbol with a non-breaking space, except for symbols raised above the baseline (°), which take no space.
+  - *Source:* "20%" → *Target:* "20 %"
+  - *Source:* "15°" → *Target:* "15°" (no space added — symbols raised above the baseline take none)
+
+- **Unit Symbol Goes Last in Intervals and Lists**: In an interval or a list of values of the same unit, the unit symbol appears only at the end.
+  - *Source:* "50 m–100 m" → *Target:* "50–100 m"
 
 - **Lithuanian Unit Abbreviations**: Use Lithuanian abbreviations for time units: min. (minute, with full stop), val. (hour), s (second). Use uppercase B for bytes (KB, MB, GB) and lowercase b for bits (Kb, Mb, Gb). Replace the English 'per' indicator with a slash in combined units.
   - *Source:* "kbps" → *Target:* "Kb/s"

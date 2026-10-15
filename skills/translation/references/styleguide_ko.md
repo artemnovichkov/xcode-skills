@@ -35,7 +35,9 @@
 
 ## Measurements
 
-- **Inch Localization for Product Names vs. Display Size**: When 'inch' appears as part of a product name (e.g., iPad Pro 13-inch), remove it from the Korean translation. When it describes display size in a spec or marketing context, convert the figure to centimeters and replace 'inch' with 'cm' (this matches Apple's shipped Korean specs, which express display sizes in cm, e.g. 33.0cm).
+- **Do Not Convert Measurements**: Generally, do not convert measurements (e.g. imperial to metric) to local measurements when they appear in sentences or phrases.
+
+- **Inch Localization for Product Names vs. Display Size**: When 'inch' appears as part of a product name (e.g., iPad Pro 13-inch), remove it from the Korean translation. When it describes display size, convert the figure to centimeters and replace 'inch' with 'cm' (Korean expresses display sizes in cm, e.g. 33.0cm).
   - *Source:* "iPad Pro 13-inch" → *Target:* "iPad Pro 13"
   - *Source:* "13-inch (diagonal)" → *Target:* "33.0cm(대각선)"
 

@@ -26,10 +26,10 @@
 
 ## Abbreviations
 
-- **Avoid Abbreviations in Software Strings**: Do not shorten words through abbreviations when a string is too long; instead, rephrase it. Where commonly accepted Russian abbreviations exist for English ones (e.g. США for USA), use them. Specific approved short forms include Кол-во, Вкл., and Выкл.
+- **Avoid Abbreviations in Software Strings**: Keep the full form by default; abbreviate only when the source itself uses an abbreviation or the translation is found to be clipped or truncated. Where commonly accepted Russian abbreviations exist for English ones (e.g. США for USA), use them. Specific approved short forms include Кол-во, Вкл., and Выкл.
   - *Source:* "Qty: %d" → *Target:* "Кол-во: %d"
 
-- **Days of the Week Abbreviations**: Use single capitalized letters (П, В, С, Ч, П, С, В) only when space is extremely tight. Use the two-letter forms (Пн, Вт, Ср, Чт, Пт, Сб, Вс) whenever space permits.
+- **Days of the Week Abbreviations**: Use the two-letter forms (Пн, Вт, Ср, Чт, Пт, Сб, Вс) for days of the week; use single capitalized letters (П, В, С, Ч, П, С, В) only when the two-letter forms are found to be clipped or truncated.
 
 ## Acronyms
 
@@ -48,7 +48,7 @@
 
 ## Measurements
 
-- **Use Russian Unit Symbols per GOST Standards**: Use a non-breaking space between the numeric value and the unit symbol. Percentage and degree signs take a narrow (two-point) space. Symbols raised above the baseline (°, ′, ″) are written without any space. Do not convert imperial measures.
+- **Use Russian Unit Symbols per GOST Standards**: Use a non-breaking space between the numeric value and the unit symbol. Percentage and degree signs take a narrow (two-point) space. Symbols raised above the baseline (°, ′, ″) are written without any space. Generally, do not convert imperial measures.
   - *Source:* "2 GB / 30 min / 100 % / 25 °C" → *Target:* "2 ГБ / 30 мин / 100 % / 25 °C" (non-breaking space before ГБ and мин; narrow no-break space before % and °C)
 
 ## Names And Addresses

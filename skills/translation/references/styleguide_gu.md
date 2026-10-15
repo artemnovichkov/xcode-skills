@@ -41,9 +41,9 @@
 - **Month Short Forms**: Use specific short forms for months with the abbreviation sign: જાન૰, ફેબ૰, માર્ચ, એપ્રિલ, મે, જૂન, જુલાઈ, ઑગ૰, સપ્ટ૰, ઑક્ટ૰, નવ૰, ડિસ૰.
   - *Source:* "Jan / Feb / Oct" → *Target:* "જાન૰ / ફેબ૰ / ઑક્ટ૰"
 
-## Measurements
+## Measurements and Units
 
-- **Do Not Convert Measurement Units**: Retain the original unit system from the English source — do not convert imperial to metric or vice versa. For electronics and computing units (GB, KB, 1080p, 5G), keep the unit in English. Add a space between the numeral and the unit, following the US source style.
+- **Do Not Convert Measurement Units**: Generally, retain the original unit system from the source — do not convert imperial to metric or vice versa. For electronics and computing units (GB, KB, 1080p, 5G), keep the unit in English. Add a space between the numeral and the unit, following the US source style.
   - *Source:* "8 GB" → *Target:* "8 GB"
 
 - **Localize Common Physical Units with Abbreviation Sign**: Common metric units like km, cm, kg, and mg are localized using Gujarati abbreviations with the abbreviation sign: કિ૰મી૰, સે૰મી૰, કિ૰ગ્રા૰, and મિ૰ગ્રા૰ respectively.
@@ -51,15 +51,11 @@
 
 ## Addresses
 
-- **Indian Address Format**: Format addresses in the standard Indian structure: Name, Building/Plot/Floor, Street/Road, Locality, City/Town, State – PIN Code. PIN codes are 6 digits with no spaces, written using international numerals. Addresses of locations outside India (e.g., Apple headquarters) should be left in English.
-  - *Source:* "158-A, Lakshmi Society, Alkapuri, Vadodara, Gujarat 390007" → *Target:* "રમેશ કુમાર,
-158-A, લક્ષ્મી સોસાયટી
-અલકાપુરી
-વડોદરા, ગુજરાત- 390007"
+- **Indian Address Format**: Format addresses in the standard Indian structure: Name, Building/Plot/Floor, Street/Road, Locality, City/Town, State – PIN Code. PIN codes are 6 digits with no spaces, written using international numerals. Addresses of locations outside India should be left in English. Example format: `રમેશ કુમાર, 158-A, લક્ષ્મી સોસાયટી, અલકાપુરી, વડોદરા, ગુજરાત- 390007`.
 
 ## Numerals
 
-- **Use Indian Numbering System for Separators**: Apply the Indian numbering system for digit grouping (e.g., 10,00,000 rather than 1,000,000).
+- **Use Indian Numbering System for Separators**: Keep numerals as international digits (0–9) and do not convert them to native Gujarati numerals, as whether they ultimately display as international or native is a user setting the translation can't see. Apply the Indian numbering system for digit grouping (e.g., 10,00,000 rather than 1,000,000).
   - *Source:* "1,000,000 songs" → *Target:* "10,00,000 ગીત"
 
 - **Ordinal Numbers in Gujarati**: Spell out ordinal numbers using full Gujarati inflected forms. The forms agree with the grammatical gender and number of the noun they modify. Avoid the numeric shorthand style (1લો, 2જો) as it is not standard Gujarati.
@@ -186,8 +182,7 @@
 - **First-Person Gender Neutrality (Siri/AI)**: When an App or system refers to itself in the first person (e.g., 'I couldn't retrieve'), use a passive construction (e.g., 'મારાથી... કરી શકાયા નથી') to remain gender-neutral. Avoid masculine forms like 'હું... શક્યો'.
   - *Source:* "I couldn\u2019t retrieve the messages from this conversation." → *Target:* "મારાથી આ વાર્તાલાપમાંથી મેસેજ રિટ્રીવ કરી શકાયા નથી."
 
-- **Culturally Adapt Foreign Names to Gujarati Equivalents**: Culturally adapt foreign placeholder names (e.g., Danny, Anthony, Elena) to familiar Gujarati names (e.g., શિવમ, શુભમ, શનાયા) so they resonate with the target locale.
-  - *Source:* "Dear Danny" → *Target:* "પ્રિય શિવમ"
+- **Culturally Adapt Placeholder Names to Gujarati Equivalents**: Culturally adapt generic placeholder names (e.g., Danny, Anthony, Elena) to familiar Gujarati names (e.g., શિવમ, શુભમ, શનાયા) so they resonate with the target locale; avoid surnames that reveal a specific caste, religion, or sect, and use a diverse, inclusive mix. If the source or the developer's comment indicates the name refers to a specific, real individual (rather than a generic placeholder), keep that person's actual name — transliterating it into Gujarati script if it appears in Latin — instead of substituting one.
 
 ## Terminology
 

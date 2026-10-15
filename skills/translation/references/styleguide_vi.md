@@ -31,7 +31,7 @@
 
 ## Measurements
 
-- **Do Not Convert Measurement Units**: Never convert imperial measurements to metric or to any other local standard. Never use " as an abbreviation for inch.
+- **Do Not Convert Measurement Units**: Generally, do not convert imperial measurements to metric or to any other local standard. Never use " as an abbreviation for inch.
   - *Source:* "10 inches" → *Target:* "10 inch"
 
 ## Names And Addresses

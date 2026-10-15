@@ -20,7 +20,7 @@
 
 ## Abbreviations
 
-- **Avoid Abbreviations in Software; Non-Breaking Space in Two-Word Abbreviations**: Do not use abbreviations in software strings unless a string is too long and no other solution exists. When a common two-word Portuguese abbreviation is used, separate its parts with a non-breaking space. Common mappings: 'e.g.' → 'por ex.', 'etc.' → 'etc.', 'page' → 'pág.'.
+- **Avoid Abbreviations in Software; Non-Breaking Space in Two-Word Abbreviations**: Keep the full form by default. If the source uses an abbreviation, keep it; otherwise, abbreviate only when the translation is found to be clipped or truncated. When abbreviating, use the corresponding Portuguese abbreviation. When a common two-word Portuguese abbreviation is used, separate its parts with a non-breaking space. Common mappings: 'e.g.' → 'por ex.', 'etc.' → 'etc.'.
   - *Source:* "e.g. / etc." → *Target:* "por ex. / etc."
 
 ## Acronyms
@@ -35,14 +35,16 @@
 
 ## Measurements
 
-- **Do Not Convert Units; Add Non-Breaking Space Before Unit Symbol**: Do not convert measurement units. In instructional text where localization is meaningful (e.g., distance to a device), convert to metric. Always add a non-breaking space between a numeric value and its unit symbol when space is available. Exception: no space before the percent sign.
+- **Do Not Convert Units; Add Non-Breaking Space Before Unit Symbol**: Generally, do not convert measurement units. However, in instructional text where localization is meaningful (e.g., distance to a device), convert to metric. Do not convert inches to centimeters when they represent screen or monitor sizes. Always add a non-breaking space between a numeric value and its unit symbol when space is available. Exception: no space before the percent sign.
   - *Source:* "2 GB / 34 km / 50%" → *Target:* "2 GB / 34 km / 50%"
   - *Source:* "Your modem should be no further than 35 feet from your computer." → *Target:* "O modem não deve estar a mais de 10 m do computador."
 
 ## Numerals
 
 - **European Portuguese Number Format**: Use a comma as the decimal separator and a space as the thousands separator for numbers with five or more digits. Numbers with exactly four digits need no separator. Ordinal numbers follow a period with a superscripted 'º' or 'ª' matching the gender of the noun. Version numbers retain a period.
-  - *Source:* "3.5 kg / 25,000 songs / 2,350 files / 1st / 2nd (feminine) / Version 2.0" → *Target:* "3,5 kg / 25 000 músicas / 2350 ficheiros / 1.º / 2.ª / Versão 2.0"
+  - *Source:* "3.5 kg / 25,000 songs / 2,350 files / Version 2.0" → *Target:* "3,5 kg / 25 000 músicas / 2350 ficheiros / Versão 2.0"
+  - *Source:* "1st" (masculine noun) → *Target:* "1.º"
+  - *Source:* "2nd" (feminine noun) → *Target:* "2.ª"
 
 ## Addresses
 
@@ -69,7 +71,7 @@
   - *Source:* "recommended for all users / restore iPod to factory settings" → *Target:* "recomendado a todos os utilizadores / restaurar o iPod com as definições de fábrica"
 
 - **Capitalization: Sentence Case Only**: In Portuguese, only the initial letter of a sentence is capitalized as a general rule. Exceptions are app and utility names (Utilitário de Discos, Definições do Sistema) and names of legal documents (Política de Privacidade, Termos e Condições). Section headings and common nouns are not capitalized.
-  - *Source:* "Read Before You Install " → *Target:* "Ler antes de instalar"
+  - *Source:* "Read Before You Install" → *Target:* "Ler antes de instalar"
 
 ## Punctuation
 
@@ -110,7 +112,7 @@
 ## Style
 
 - **Standardized translations**: Standardized translations are somewhat similar to established terminology. Certain sentences will always be translated consistently the same way. The usage of consistent translations for repetitive text phrases is recommended.
-  - *Source:* "More Info / Learn More / Make sure that … " → *Target:* "Informação adicional / Saiba mais / Certifique‑se de que…"
+  - *Source:* "More Info / Learn More / Make sure that …" → *Target:* "Informação adicional / Saiba mais / Certifique‑se de que…"
 
 - **What’s New, Welcome and Store texts**: These texts should be clear and concise. Addressing the user directly should be avoided. In these types of files, bulleted lists are normally used to list items (e.g. new features, bug fixes) without a specific order. In this case, bullet point items should be treated as “standalone” items and begin with an uppercase letter and end with a full stop, regardless of whether they are preceded by an introductory sentence ending or not in a colon “:”. When an introductory sentence ending in a colon and each subsequent bullet point item form a grammatical unit, each item should begin with a lowercase letter and end with a semi-colon “;”. A full stop is used only on the last item of the list.
   - *Source:* "This update adds the following features:

@@ -28,7 +28,7 @@
 
 - **Avoid "and/or"**: Rewrite to avoid the construction — "document and app icons", not "document and/or app icons".
 
-- **Avoid abbreviations and Latin shortcuts**: Don’t introduce abbreviations to save space; if a string is too long, make a note about a UI improvement rather than abbreviate. Avoid Latin abbreviations ("for example", not "e.g."; "and so on", not "etc."; "that is", not "i.e."). Keep an acronym as the source uses it; if the source pairs it with a spelled-out form, keep that, and don't add an expansion the source lacks or drop one it has.
+- **Avoid abbreviations and Latin shortcuts**: Keep full words by default; abbreviate only when the translation is found to be clipped or truncated. Avoid Latin abbreviations ("for example", not "e.g."; "and so on", not "etc."; "that is", not "i.e."). Keep an acronym as the source uses it; if the source pairs it with a spelled-out form, keep that, and don't add an expansion the source lacks or drop one it has.
 
 ## Capitalization
 
@@ -38,7 +38,7 @@
 
 ## Punctuation
 
-- **Curly quotation marks**: Use English curly quotation marks “ (\u201C) and ” (\u201D), not straight quotes and not the source language’s quotation style (guillemets, low-high quotes, corner brackets, etc.). Straight quotes and primes are only for code and for feet/inches. Put periods and commas inside the quotation marks; put semicolons, colons, question marks, and exclamation points outside unless part of an actual quotation.
+- **Curly quotation marks**: Use English curly quotation marks “ (\u201C) and ” (\u201D), not straight quotes and not the source language’s quotation style (guillemets, low-high quotes, corner brackets, etc.). Straight quotes are only for code; feet and inches take the prime ′ (\u2032) and double prime ″ (\u2033), not quotation marks. Put periods and commas inside the quotation marks; put semicolons, colons, question marks, and exclamation points outside unless part of an actual quotation.
 
 - **What to quote**: Quote onscreen elements whose names use sentence-style capitalization, including checkbox and option labels ("Select the “Allow repeated calls” checkbox" (\u201C, \u201D)). For title-style element names, quote only if the name could be misread in context. Quote onscreen messages cited in text.
 
@@ -62,7 +62,7 @@
 
 - **Number grouping and decimals**: Use a comma as the thousands separator, even with four digits ("1,000 songs"), and a period as the decimal separator — converting from the source’s separators where they differ. Don’t alter decimal points inside variables such as "%.1f". Flag any string that hard-codes a grouping or decimal separator.
 
-- **Units of measure**: Insert a space between the number and a unit symbol or abbreviation ("20 GB of memory"). Unit symbols are unaltered in the plural ("lb.", not "lbs."). Hyphenate a spelled-out unit in a compound adjective ("20-yard line"), but not the symbol form ("30 GB capacity"). Where a unit is shown, flag any string that hard-codes a unit instead of using a formatter.
+- **Units of measure**: Insert a space between the number and a unit symbol or abbreviation ("20 GB of memory"). Unit symbols are unaltered in the plural ("lb.", not "lbs."). Hyphenate a spelled-out unit in a compound adjective ("20-yard line"), but not the symbol form ("30 GB capacity"). Where a unit is shown, flag any string that hard-codes a unit instead of using a formatter. Spell a unit out where the source does ("17-inch display"); where the source uses a mark, use the double prime ″ (\u2033) for inches and the prime ′ (\u2032) for feet, never a quotation mark.
 
 - **Time of day**: Use numerals for times. Include "a.m." and "p.m." in lowercase, with periods, preceded by a space ("10:45 a.m."). Use "noon" and "midnight".
 

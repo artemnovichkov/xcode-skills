@@ -34,7 +34,7 @@
 
 ## Measurements
 
-- **Do Not Convert Measurements; Space Between Value and Unit**: Do not convert imperial measurements. Always insert a space between the numeric value and the unit of measurement. When the number and unit form an adjective compound, join them with a hyphen.
+- **Do Not Convert Measurements; Space Between Value and Unit**: Generally, do not convert imperial measurements. Always insert a space between the numeric value and the unit of measurement. When the number and unit form an adjective compound, join them with a hyphen.
   - *Source:* "2 MB" → *Target:* "2 MB"
   - *Source:* "2.5 GHz 6-core processor" → *Target:* "2,5-GHz 6-core-processor" (adjective compound → hyphen)
 

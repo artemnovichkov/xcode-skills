@@ -26,7 +26,7 @@
 
 ## Measurements
 
-- **Do Not Convert Measurements**: Do not convert imperial measurements to metric. Canada uses the metric system but do not apply conversions independently. Never use the double-quote symbol as an abbreviation for inches — use 'po' instead.
+- **Do Not Convert Measurements**: Generally, do not convert imperial measurements to metric. Canada uses the metric system but do not apply conversions independently. Never use the double-quote symbol as an abbreviation for inches — use 'po' instead.
   - *Source:* "10 in." → *Target:* "10 po"
 
 ## Addresses

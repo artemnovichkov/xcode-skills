@@ -22,8 +22,7 @@
 
 ## Abbreviations
 
-- **Avoid Abbreviations in Software UI**: Do not shorten words via abbreviations unless space restrictions make it unavoidable. When abbreviating, omit the trailing part of a word ending with a consonant and add a period (e.g. Οικογεν.), or omit middle characters replaced by a slash (e.g. Λογ/σμοί). When "About + feature name" must be shortened, drop the word "About" and keep the feature name intact.
-  - *Source:* "Family Sharing" → *Target:* "Οικογεν. κοινή χρήση" (only when space is limited)
+- **Avoid Abbreviations in Software UI**: Keep the full form by default; abbreviate only when the source itself uses an abbreviation or the translation is found to be clipped or truncated. When abbreviating, form the Greek abbreviation by omitting the trailing part of a word ending with a consonant and adding a period (e.g. Οικογεν.), or by omitting middle characters replaced by a slash (e.g. Λογ/σμοί). When "About + feature name" is shortened, drop the word "About" and keep the feature name intact.
   - *Source:* "About Improve Communication Safety & Privacy" → *Target:* "Βελτίωση της Ασφάλειας επικοινωνίας και απόρρητο"
 
 ## Acronyms
@@ -45,6 +44,8 @@
   - *Source:* "1,000,000 songs" → *Target:* "1.000.000 τραγούδια"
 
 ## Measurements
+
+- **Do Not Convert Measurement Units**: Generally, do not convert measurements (e.g. imperial to metric) to local measurements when they appear in sentences or phrases — for example, do not convert inches to centimeters.
 
 - **Space Between Number and Unit; Common Greek Units**: Always insert a space between a number and its unit, whether the unit is Greek or English (e.g. 2 GB, 4,5 εκ.). Exceptions with no space include 4K, 1080p, percentage signs, and temperature variables. Use a recognised Greek abbreviated form when one exists (e.g. εκ. for cm).
   - *Source:* "2 GB" → *Target:* "2 GB"

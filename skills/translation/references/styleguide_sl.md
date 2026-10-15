@@ -64,7 +64,7 @@
 
 ## Measurements
 
-- **Do Not Convert Measurements; Use Non-Breaking Space**: Do not convert imperial or other measurements to Slovenian equivalents. Always insert a non-breaking space between a numeral and its unit. Spell out the percent word ("odstotkov") in full sentences; use the % symbol only in short labels or space-restricted places like tables, with a non-breaking space before it. Exception: when the degree symbol is used without C or F following it, omit the space.
+- **Do Not Convert Measurements; Use Non-Breaking Space**: Generally, do not convert imperial or other measurements to Slovenian equivalents. However, when a source measurement is illustrative rather than technical, convert it to the Slovenian equivalent and round the result — for example, inches to centimeters in "Hold the device 10 inches from your face". Always insert a non-breaking space between a numeral and its unit. Spell out the percent word ("odstotkov") in full sentences; use the % symbol only in short labels or space-restricted places, with a non-breaking space before it. Exception: when the degree symbol is used without C or F following it, omit the space.
   - *Source:* "Battery 100%" → *Target:* "Baterija 100 %"
   - *Source:* "The screen dims to 25%." → *Target:* "Osvetlitev zaslona se zmanjša na 25 odstotkov."
   - *Source:* "20°C" → *Target:* "20 °C" (non-breaking space before the unit; "20°" takes no space when the C or F is omitted)

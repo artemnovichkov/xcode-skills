@@ -15,8 +15,8 @@
 - **Localize Common Abbreviations, Keep Technical Ones**: Do not use abbreviations in software unless absolutely necessary. Identifiers like ID, URL, and PPP stay in English. Month, weekday, and time abbreviations (Jan., Sun., AM/PM) should be localized. Watch for context-dependent abbreviations like Min (minutes vs. minimum). The abbreviation vs/vs./v.s. should be kept in English following source punctuation.
   - *Source:* "BCC" → *Target:* "密送"
   - *Source:* "Lakers vs. Chicago" → *Target:* "湖人队 vs. 芝加哥队"
-  - *Source:* "Min (for Minimum)" → *Target:* "最小"
-  - *Source:* "Min (for Minutes)" → *Target:* "分/分钟"
+  - *Source:* "Min" (for Minimum) → *Target:* "最小"
+  - *Source:* "Min" (for Minutes) → *Target:* "分/分钟"
 
 ## Acronyms
 
@@ -30,7 +30,7 @@
 
 ## Measurements
 
-- **Do Not Convert Measurements**: Do not convert imperial measurements to metric in software strings. Never use the inch symbol as an abbreviation.
+- **Do Not Convert Measurements**: Generally, do not convert imperial measurements to metric in software strings. Never use the inch symbol as an abbreviation.
   - *Source:* "minimum separation distance of 8 inches (20 cm)" → *Target:* "至少8英寸（20厘米）的距离"
 
 - **Use English Symbols for Technical Units**: For units with long Chinese names, retain the English symbol or abbreviation. Units including KB, MB, GB, Hz, kHz, MHz, dB, kbps, Mbps, Gbps, and others do not need to be localized when they appear as abbreviations.
@@ -101,8 +101,19 @@
 
 ## Variables
 
-- **Preserve Variable Format and Count Exactly**: Keep every runtime variable (%@, %d, %1$@, etc.) in the translation with the same format as the source. Never change %@ to %e or similar. Variables may be reordered but must then be numbered (e.g., %1$@, %2$@). The count of variables must match the source exactly.
+- **Preserve Variable Format and Count Exactly**: Keep every runtime variable (%@, %d, %1$@, etc.) in the translation with the same format as the source — except to add the `[tt]` technical-term flag described in the next rule. Never change %@ to %e or similar. Variables may be reordered but must then be numbered (e.g., %1$@, %2$@). The count of variables must match the source exactly.
   - *Source:* ""%d or more"" → *Target:* ""%d个或更多""
+
+- **Add `[tt]` to a `%@` Variable That Holds a Name or Technical Term**: `%[tt]@` asks the system to add curly double quotation marks “ (\u201C) and ” (\u201D) around the substituted value at runtime when the value is Chinese, and to leave a Latin value unquoted. Add `[tt]` to a `%@` — `%@` → `%[tt]@`, or with a positional index `%2$@` → `%2$[tt]@` — when the value is an app name, a menu or command name, or another name or technical term (inferred from the source, the developer comment, the key, or the code).
+  - **Write the positional index before `[tt]`: `%2$[tt]@`, never `%[tt]2$@`.**
+  - Add `[tt]` only when the code formats the string with a localized API — `String(localized:)`, `LocalizedStringResource`, `Text()`, `localizedStringWithFormat`, or `String(format:locale:)` with a matching locale. With `String(format:)` / `stringWithFormat` the flag is silently ignored.
+  - Do not add `[tt]` when the value is a number, date, duration, count, URL, email address, file path, or image/icon name.
+  - Do not add `[tt]` when the value is already set off on both sides — already inside “ ”, other quotation marks, or parentheses — because the runtime quotation marks would double up.
+  - When the variable sits directly against English text such as "App", write the quotation marks yourself instead of using `[tt]`: the value may arrive in either script, and `[tt]` quotes only a Chinese one. A Latin value would not receive quotation marks or an inserted space and would run into the neighboring word. Hard-code quotation marks to keep the boundary clear for whichever script is used as value at runtime.
+  - When in doubt, leave `%@` unchanged: a plain `%@` is always safe, whereas a wrongly written `[tt]` can silently change what the string renders.
+  - *Source:* "Open %@" → *Target:* "打开%[tt]@" (value is an app name — at runtime a Chinese value is quoted, e.g. 打开“邮件”, and a Latin value is not, e.g. 打开Safari)
+  - *Source:* "%@ and %ld other apps were installed on another Apple TV by the Apple ID %@." → *Target:* "已用Apple ID %3$@在其他Apple TV上安装%1$[tt]@和其他%2$ld个App。" (reordered with positional markers — the app name takes `%1$[tt]@` with the index before `[tt]`; the Apple ID `%3$@` stays plain, since an account identifier is not a name or technical term)
+  - *Source:* "The action could not run because the %@ app quit unexpectedly." → *Target:* "无法运行操作，因为\u201C%@\u201D App意外退出。" (the variable sits directly against English "app" — quote it instead of using `[tt]`)
 
 ## Diversity And Inclusion
 

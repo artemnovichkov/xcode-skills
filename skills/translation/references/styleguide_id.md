@@ -54,7 +54,7 @@
 
 ## Measurements
 
-- **Measurement Handling and Imperial-to-Metric Swap**: Do not convert imperial measurements to metric. When a sentence already contains both a metric and an imperial value in parentheses, swap their positions so the metric value appears first and the imperial value moves inside the parentheses.
+- **Measurement Handling and Imperial-to-Metric Swap**: Generally, do not convert imperial measurements to metric. When a sentence already contains both a metric and an imperial value in parentheses, swap their positions so the metric value appears first and the imperial value moves inside the parentheses.
   - *Source:* "a workout of at least a mile (1.6K)" → *Target:* "berolahraga setidaknya sejauh 1,6 km (satu mil)"
 
 ## Numerals

@@ -29,7 +29,7 @@
 
 ## Abbreviations
 
-- **Avoid Abbreviations in Software Strings**: Do not shorten words through abbreviations in UI translations. If a string is too long, use a shorter alternative translation rather than abbreviating. A fixed set of accepted abbreviations exists for units such as сағ, мин, сек, КБ, МБ, ГБ.
+- **Avoid Abbreviations in Software Strings**: Keep the full form by default; abbreviate only when the translation is found to be clipped or truncated. The exception is a fixed set of accepted unit abbreviations, used as the standard rendering of those units even when the source spells them out: сағ (hour), мин (minute), сек (second), КБ, МБ, ГБ.
   - *Source:* "hour / minute / second" → *Target:* "сағ / мин / сек"
   - *Source:* "kilobyte / megabyte / gigabyte" → *Target:* "КБ / МБ / ГБ"
 
@@ -45,13 +45,12 @@
 
 ## Measurements
 
-- **Do Not Convert Measurements**: Do not convert imperial measurements to metric or local equivalents. Use the double prime symbol (″ (\u2033)) as the abbreviation for inches. Spell out miles as 'миль'; if an abbreviation is unavoidable, use 'ми' (not 'мл', which means milliliters).
+- **Do Not Convert Measurements**: Generally, do not convert imperial measurements to metric or local equivalents. Use the double prime symbol (″ (\u2033)) as the abbreviation for inches. Spell out miles as 'миль'; if an abbreviation is unavoidable, use 'ми' (not 'мл', which means milliliters).
   - *Source:* "5 miles" → *Target:* "5 миль"
 
 ## Names And Addresses
 
 - **Kazakh Address Format**: Follow the Kazakh post-office convention — street/avenue name and building number, apartment or office number, city, postal index, country, with the 6-digit postal index placed after the city name (e.g. "Абай даңғылы, 10, Алматы, 050000, Қазақстан"). Foreign addresses outside CIS countries are kept as-is.
-  - *Source:* "Apple Inc. One Apple Park Way, Cupertino, CA 95014, United States" → *Target:* "Apple Inc. One Apple Park Way, Cupertino, CA 95014, United States" (foreign address kept as-is)
 
 ## Numerals
 

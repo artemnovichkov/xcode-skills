@@ -1,8 +1,8 @@
 ---
-displayName: "Translate Strings"
-description: "Translate strings in Xcode String Catalogs (.xcstrings files). Prefer to use the `xcode-skills:translation-coordinator` skill for task-coordination. Use this skill when translating individual strings or working with String Catalogs. Should only be activated when translating a single string or a small batch of known string keys. The `translation-coordinator` skill should be used for anything else."
-sfSymbolName: translate
 name: translation
+description: "Translate strings in Xcode String Catalogs (.xcstrings files). Prefer to use the `xcode-integration:translation-coordinator` skill for task-coordination. Use this skill when translating individual strings or working with String Catalogs. Should only be activated when translating a single string or a small batch of known string keys. The `translation-coordinator` skill should be used for anything else."
+displayName: "Translate Strings"
+sfSymbolName: translate
 ---
 # String Catalog Translator
 
@@ -76,6 +76,7 @@ Check whether the translation needs plural variation, device variation, or both.
 
 - **Plural**: If the string contains a numeric format specifier (`%lld`, `%d`, `%u`, etc.) paired with a countable noun, read [references/plural-variations.md](./references/plural-variations.md) (resolve it relative to the skill's base directory). The context tool provides `relevantPluralCases` for your target locale—use all of them.
     - If the context tool also returned `sourcePluralCasesToAdd`, the source itself isn't plural-varied yet. Vary the source first in a separate `StringCatalogEdit` call before translating the target — [references/plural-variations.md](./references/plural-variations.md) walks through this two-step flow.
+    - If the count arrives pre-formatted in a non-numerical specifier (`%@`), plural variation cannot apply at all. [references/plural-variations.md](./references/plural-variations.md) covers how to restructure instead, and requires you to report the key back as needing a numerical placeholder.
 - **Device**: If the string references a device-specific interaction (tap vs. click) or mentions a device by name, read [references/device-variations.md](./references/device-variations.md) (resolve it relative to the skill's base directory)
 - **Both**: A string can need both — for example, "Tap to launch %lld spaceships" differs by device AND has a countable noun. Combine device and plural keys (e.g., `device.iphone.plural.one`), but keep `device.other` as a flat fallback string that covers both variations
 
@@ -85,6 +86,8 @@ Call `StringCatalogEdit` with the appropriate translation type. Translate the **
 **Repeat these 6 steps until all requested strings are translated.**
 
 Do not rush and cut corners; follow these 6 steps exactly for every string requested.
+
+**When you are finished**, list any string you had to work around rather than translate properly. A workaround nobody hears about is a workaround nobody fixes.
 
 
 # Tool Reference

@@ -100,7 +100,7 @@
 
 ## Measurements
 
-- **Do Not Convert Units — Follow the Source; Never Use " for Inch**: Do not convert imperial to metric or vice versa. For the inch mark use the double prime ″ (\u2033); never use a straight or curly double quotation mark. Thai uses the metric system in general.
+- **Do Not Convert Units — Follow the Source; Never Use " for Inch**: Generally, do not convert imperial to metric or vice versa. For the inch mark use the double prime ″ (\u2033); never use a straight or curly double quotation mark. Thai uses the metric system in general.
   - *Source:* "Place iPad 10 to 20 inches from your face." → *Target:* "ให้ iPad ห่างจากใบหน้าของคุณ 10 ถึง 20 นิ้ว"
 
 ## Trademarks And Product Names
@@ -127,14 +127,16 @@
 - **Preserve Variables Exactly; Reorder with Positional Indices as Needed**: Never alter or omit variable format specifiers — except to add the `[tt]` technical-term flag. If Thai word order requires a different variable sequence, add positional indices (%1$@, %2$@, etc.) to every variable in the string. Do not change the period inside numeric format specifiers such as %.1f.
   - *Source:* "Meeting scheduled for %1$@ %2$@." → *Target:* "นัดหมายสำหรับ %2$@ %1$@"
 
-- **Add `[tt]` (Technical Term) to a `%@` Variable That Holds a Name or Technical Term**: `[tt]` controls the spacing where a substituted value meets the Thai text next to it — at runtime it adds a space when the value is non-Thai (e.g. a Latin app name) and none when it is Thai. Add `[tt]` to a `%@` variable — `%@` → `%[tt]@`, or with a positional index `%2$@` → `%2$[tt]@` — when the variable sits directly against Thai characters on its left and/or right (the usual case, since Thai has no spaces between words). Add it only when both hold: (a) the code formats the string with a modern localized API (`String(localized:)`, `LocalizedStringResource`, `localizedStringWithFormat`, or `format:locale:`) — never `String(format:)` / `stringWithFormat`; and (b) the value is a human-readable name, title, or app/device/item name (confirm from the source, developer comment, string key, or code). If either is not clear, leave `%@` unchanged. `[tt]` attaches only to `%@` (object) specifiers, never to `%d`, `%f`, etc.
-  - Do not add `[tt]` when the variable is set off from the Thai on both sides — wrapped in quotes or parentheses, or separated by a comma: `"%@"`, `(%@)`, `%@, %@, and others`. A trailing space plus a parenthetical such as ` (Bluetooth)` does not exclude it if the other side still sits against Thai (see the Bluetooth example).
-  - Also do not add `[tt]` when the value is an image, glyph, icon, link, or URL, or a number.
+- **Add `[tt]` (Technical Term) to a `%@` Variable That Holds a Name or Technical Term**: `[tt]` controls the spacing where a substituted value meets the Thai text next to it — at runtime it adds a space when the value is non-Thai (e.g. a Latin app name) and none when it is Thai. Add `[tt]` to a `%@` variable — `%@` → `%[tt]@`, or with a positional index `%2$@` → `%2$[tt]@` — when the variable sits directly against Thai characters on its left and/or right (the usual case, since Thai has no spaces between words). Add it only when both hold: (a) the code formats the string with a localized API (`String(localized:)`, `LocalizedStringResource`, `Text()`, `localizedStringWithFormat`, or `String(format:locale:)` with a matching locale) — never `String(format:)` / `stringWithFormat`; and (b) the value is a human-readable name, title, or app/device/item name (confirm from the source, developer comment, string key, or code). If either is not clear, leave `%@` unchanged. `[tt]` attaches only to `%@` (object) specifiers, never to `%d`, `%f`, etc.
+  - **Write the positional index before `[tt]`: `%2$[tt]@`, never `%[tt]2$@`.**
+  - Do not add `[tt]` when the variable is set off from the Thai on both sides — wrapped in quotes or parentheses, or separated by a comma: `\u201C%@\u201D`, `(%@)`, `%@, %@, and others`. A trailing space plus a parenthetical such as ` (Bluetooth)` does not exclude it if the other side still sits against Thai (see the Bluetooth example).
+  - Also do not add `[tt]` when the value is a number, date, duration, count, URL, link, email address, file path, or image, glyph, or icon name.
   - Adding `[tt]` is the only change permitted to a specifier's contents; otherwise keep variables exactly as the source has them.
-  - *Note:* with `String(format:)` / `stringWithFormat`, `[tt]` is not supported and a literal `%[tt]@` can appear in the UI at runtime; only add `[tt]` when the code uses a modern API, or update the code to a modern API if that change is trivial.
+  - *Note:* with `String(format:)` / `stringWithFormat`, `[tt]` is not supported — the flag is silently ignored and the value is substituted with no spacing added, rather than showing up as a literal token in the UI; only add `[tt]` when the code uses a modern API. If it doesn't, do not use `[tt]` and report this modernization task back, because it needs a code change first.
   - *Source:* "Send a message to %@" → *Target:* "ส่งข้อความถึง%[tt]@" (value sits against Thai on the left → add)
   - *Source:* "Search %@ or enter your address" → *Target:* "ค้นหา%[tt]@หรือป้อนที่อยู่ของคุณ" (against Thai on both sides → add)
   - *Source:* "Connect to %@ (Bluetooth)" → *Target:* "เชื่อมต่อกับ%[tt]@ (Bluetooth)" (against Thai on the left; the trailing " (Bluetooth)" is space-separated → still add)
+  - *Source:* "\u201C%@\u201D can\u2019t save %@ to %@ storage because there isn\u2019t enough space available." → *Target:* "\u201C%@\u201D ไม่สามารถบันทึก%[tt]@ลงในพื้นที่จัดเก็บ%[tt]@ได้เนื่องจากมีพื้นที่ว่างไม่เพียงพอ" (the first `%@` is already inside quotation marks, so it stays plain; the other two sit directly against Thai, where `[tt]` is worth adding — at runtime it inserts a space on each side only if the value turns out to be non-Thai, and does nothing for a Thai value)
 
 ## Diversity And Inclusion
 

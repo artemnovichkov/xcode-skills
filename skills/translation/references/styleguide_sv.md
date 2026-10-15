@@ -7,9 +7,7 @@
 
 ## Names And Addresses
 
-- **Swedish Address Format and Approved Example Names**: Use the Swedish address format (name, street address and number, postal code and city, country). The approved name set includes 'Mats Utberg' (John Appleseed), 'Bjorn Olsberg' (John Doe), and 'Sara Engberg' (Jane Doe). 'Johnny Appleseed' is kept as-is.
-  - *Source:* "John Doe" → *Target:* "Mats Utberg / Bjorn Olsberg"
-  - *Source:* "Jane Doe" → *Target:* "Sara Engberg"
+- **Swedish Address Format and Example Names**: Use the Swedish address format (name, street address and number, postal code and city, country). For a generic placeholder name, use a very common Swedish name. If the source or the developer's comment indicates the name refers to a specific, real individual (rather than a generic placeholder), keep that person's actual name.
 
 ## Trademarks And Product Names
 
@@ -32,8 +30,8 @@
 - **Sentence length**: Avoid making sentences overly complicated and long. Long sentences in English are often better split up into at least two in Swedish.
   - *Source:* "This is the control on the Screen Time settings pane that lets you enable the screen distance setting, which reports when you do not hold your device at a safe distance." → *Target:* "Det här är reglaget på inställningspanelen för Skärmtid som gör att du kan aktivera inställningen Skärmavstånd. Den varnar dig när du inte håller enheten på ett tryggt avstånd."
 
-- **Units**: Convert all measurement units to the metric system (kilograms, Celsius, liters, kilometers, etc.). Remove original values and units. Use contextually appropriate conversions and round down to one decimal if needed. 
-  - *Source:* "Hold iPad 10 to 20 inches from your face." → *Target:* "Håll iPad mellan 25 och 50 cm från ansiktet."
+- **Units**: In general, do not convert measurements (for example imperial to metric) when they appear in sentences or phrases. However, convert when the source measurement is illustrative, and round the Swedish value. Use your judgment: "1,000 feet" probably does not mean "304,8 meter", but "2.31 inches" probably does mean "58,6 mm".
+  - *Source:* "Your device needs to be within 30 feet of your computer" → *Target:* "Enheten måste finnas inom 9 meter från datorn" (illustrative: converted and rounded, not "Enheten måste finnas inom 9,14 meter från datorn")
 
 - **Currency**: Convert currency values to SEK using the rates $1 USD=10 SEK and 1€=10 SEK. Use "kr" as the Swedish currency symbol. Remove the original values and units.
   - *Source:* "Subject to a service fee of $99 for screen damage or external enclosure damage." → *Target:* "En självrisk på 990 kr för skada på skärm eller yttre hölje tillkommer."

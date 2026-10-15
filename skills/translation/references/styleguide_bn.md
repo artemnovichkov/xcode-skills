@@ -40,19 +40,19 @@
 - **Time Format and AM/PM**: Use hh:mm:ss with a colon as separator and no spaces around the colon. Do not translate or localize AM/PM: keep it in English, following source capitalization.
   - *Source:* "10:18:35 AM" → *Target:* "10:18:35 AM"
 
-## Measurements
+## Measurements and Units
 
-- **Retain Electronic and Computer Units in English**: Units related to electronics and computing (GB, KB, dB, etc.) should remain in English. There must be a space between the number and the unit. Do not convert imperial to metric. Some units are exempt from CLDR: μS, oz, kcal, dB, cal.
+- **Retain Electronic and Computer Units in English**: Units related to electronics and computing (GB, KB, dB, etc.) should remain in English. There must be a space between the number and the unit. Generally, do not convert imperial to metric. Some units are exempt from CLDR: μS, oz, kcal, dB, cal.
   - *Source:* "8 GB" → *Target:* "8 GB"
   - *Source:* "1080p" → *Target:* "1080p"
 
 ## Names And Addresses
 
-- **Use Caste- and Sect-Neutral Sample Names**: When localizing English placeholder names (e.g., John Doe, Jane Doe), choose Indian-Bangla equivalents that do not reveal caste, religion, or regional sect. Use a culturally diverse mix that reflects gender balance. If the UI shows a non-Indian person's photo or context, transliterate the source name instead of substituting a Bangla one.
+- **Use Caste- and Sect-Neutral Sample Names**: When localizing generic placeholder names (e.g., John Doe, Jane Doe), choose Indian-Bangla equivalents that do not reveal caste, religion, or regional sect. Use a culturally diverse mix that reflects gender balance. If the source or the developer's comment indicates the name refers to a specific, real individual (rather than a generic placeholder), keep that person's actual name — transliterating it into Bengali script if it appears in Latin — instead of substituting a Bangla one.
 
 ## Numerals
 
-- **Use International Numerals and Indian Separator System**: The system standard for Bangla is international numerals (0–9). Use the Indian number separator system (e.g., 10,00,000).
+- **Use International Numerals and Indian Separator System**: The current default for Bangla is international numerals (0–9); keep the source's digits and do not convert them to native Bengali numerals, as whether they ultimately display as international or native is a user setting the translation can't see. Use the Indian number separator system (e.g., 10,00,000).
   - *Source:* "1,000,000 songs" → *Target:* "10,00,000 গান"
   - *Source:* "%lld person" → *Target:* "%lld জন ব্যক্তি"
 

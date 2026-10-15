@@ -141,8 +141,8 @@
 
 ## Abbreviations
 
-- **Abbreviation Formation in Odia**: Avoid abbreviations in software translations unless space constraints make them unavoidable. Odia abbreviations are formed by taking the first syllable of the word followed by a dot (.). For example, ଦ.ପୂ. for ଦକ୍ଷିଣ-ପୂର୍ବ. Technical file format abbreviations (PDF, DOC, RTF) are kept in English.
-  - *Source:* "South-East" → *Target:* "ଦ.ପୂ." (abbreviated)
+- **Abbreviation Formation in Odia**: Keep the full form by default; abbreviate only when the source itself uses an abbreviation or the translation is found to be clipped or truncated. When abbreviating, form the Odia abbreviation by taking the first syllable of the word followed by a dot (.). For example, ଦ.ପୂ. for ଦକ୍ଷିଣ-ପୂର୍ବ. Technical file format abbreviations (PDF, DOC, RTF) are kept in English.
+  - *Source:* "SE" (South-East) → *Target:* "ଦ.ପୂ."
 
 ## Acronyms
 
@@ -157,19 +157,19 @@
 
 ## Numerals
 
-- **Indian Numbering System for Separators**: Group large numbers using the Indian numbering system for digit grouping (e.g. 10,00,000 for one million). Keep the source's digits as they appear and do not transform the numeral system yourself. For count of objects, use the counter ଟି (for things) or ଜଣ ବ୍ୟକ୍ତି (for people).
+- **Indian Numbering System for Separators**: Group large numbers using the Indian numbering system for digit grouping (e.g. 10,00,000 for one million). Keep the source's digits as they appear and do not transform the numeral system yourself, as whether they ultimately display as international or native is a user setting the translation can't see. For count of objects, use the counter ଟି (for things) or ଜଣ ବ୍ୟକ୍ତି (for people).
   - *Source:* "10,000,000 songs" → *Target:* "1,00,00,000 ଗୀତ"
   - *Source:* "1 person" → *Target:* "1 ଜଣ ବ୍ୟକ୍ତି"
   - *Source:* "5 cards found" → *Target:* "5 ଟି କାର୍ଡ୍ ମିଳିଲା"
 
-## Measurements
+## Measurements and Units
 
 - **Electronic Units Stay in English**: Measurement units related to electronics or computers (GB, KB, MB, etc.) are kept in English. For other units, always use the Odia abbreviation dot (.) for short and narrow unit forms. Some units without popular Odia short forms (lb, oz, yd, db, kcal) are kept in English.
   - *Source:* "8 GB" → *Target:* "8 GB"
   - *Source:* "kg" → *Target:* "କି.ଗ୍ରା."
   - *Source:* "cm" → *Target:* "ସେ.ମୀ."
 
-- **No Conversion of Measurements**: Do not convert measurements (e.g., imperial to metric) to local measurements when given in sentences or phrases. For example, do not convert inches to cm. Keep the original measurement values.
+- **No Conversion of Measurements**: Generally, do not convert measurements (e.g., imperial to metric) to local measurements when given in sentences or phrases. For example, do not convert inches to cm. Keep the original measurement values.
   - *Source:* "5\u2033 display" → *Target:* "5\u2033 ଡିସ୍‌ପ୍ଲେ"
 
 - **Spacing Between Number and Unit**: Match the space between the number and the unit of measurement exactly as it appears in the source. If the source has no space, the target should have no space.

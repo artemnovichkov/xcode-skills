@@ -112,6 +112,23 @@ When source has device variations AND each contains nouns needing pluralization,
 }
 ```
 
+## A Number Behind a Non-Numerical Specifier
+
+Sometimes a number reaches the string already formatted — the code formatted it for grouping separators or native digits and interpolated the result — so it arrives as `%@` rather than `%lld`. Plural categories are selected by reading a number, and `%@` is a string, so there is no axis to vary on. No translation repairs this: the string needs a numerical placeholder, which is a change in the source code.
+
+Do two things.
+
+**Translate around it.** Restructure so that no word has to agree with the count. Place the variable after a colon (preferred, shorter) or inside brackets, and keep the counted noun in the form the target locale uses for a standalone label — for many languages, the plural nominative.
+
+- **Source**: `"%@ photos"` → `"Fotografije: %@"`
+- **Source**: `"Sending %@ photos to destination."` → `"Slanje fotografija (%@) na odredište."`
+
+Do not build a plural variation over a `%@`, and do not pick the one plural form that fits the most-common count.
+
+**Report it.** Name the key in your final summary and state that it needs a numerical placeholder for correct plural agreement. The restructured string reads acceptably, but it is not the sentence the language would otherwise use. Only a code fix gets that back.
+
+Restructuring is only for the non-numerical case. When the variable is numerical, vary by plural instead, providing every case in `relevantPluralCases` for the target locale.
+
 ## When the Source Needs Plural First
 
 If `StringCatalogContext` returned a `sourcePluralCasesToAdd`, the source string might have to be varied by plural, but is not yet. You need to vary the source value by plural first.

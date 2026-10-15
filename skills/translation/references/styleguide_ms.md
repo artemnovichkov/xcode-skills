@@ -12,8 +12,8 @@
 
 ## Abbreviations
 
-- **Avoid Abbreviations**: Do not shorten words through abbreviations in software. If a string is too long due to UI constraints, work around it by restructuring the phrase rather than inventing abbreviated forms.
-  - *Source:* "20 MB daripada 1 GB" → *Target:* "20 MB / 1 GB (layout fix) — not '20 MB drp 1 GB'"
+- **Avoid Abbreviations**: Keep the full form by default. If the source uses an abbreviation, keep it; otherwise, abbreviate only when the translation is found to be clipped or truncated. When abbreviating, use an established Malay abbreviation rather than inventing a new one.
+  - *Source:* "20 MB of 1 GB" → *Target:* "20 MB daripada 1 GB" (write "daripada" in full; do not invent the abbreviation "drp")
 
 ## Acronyms
 
@@ -28,13 +28,13 @@
 
 ## Measurements
 
-- **Use Metric Units with a Space**: Do not convert imperial measurements. Always insert a space between the numeric value and the unit. Temperature and currency symbols have no space; distance units do.
+- **Use Metric Units with a Space**: Generally, do not convert imperial measurements. Always insert a space between the numeric value and the unit. Temperature and currency symbols have no space; distance units do.
   - *Source:* "20 km" → *Target:* "20 km"
   - *Source:* "34°C" → *Target:* "34°C"
 
 ## Names And Addresses
 
-- **Malaysian Address Format**: Sample names follow the source (John Doe stays as John Doe). Addresses follow Malaysian conventions: unit number and street, then postcode and city, then state and country. The Malaysian postcode (Poskod) is a 5-digit number. Example format: `25, Jalan 12/E, Taman Ria, 47300 Petaling Jaya, Selangor Darul Ehsan, Malaysia`.
+- **Malaysian Address Format**: Sample names follow the source (John Doe stays as John Doe). For a generic sample address, follow Malaysian conventions: unit number and street, then postcode and city, then state and country; leave a real address as-is. The Malaysian postcode (Poskod) is a 5-digit number. Example format: `25, Jalan 12/E, Taman Ria, 47300 Petaling Jaya, Selangor Darul Ehsan, Malaysia`.
 
 ## Numerals
 
@@ -93,7 +93,7 @@
 ## General Advice
 
 - **Contextual Translation Over Literal Translation**: Always read surrounding strings to understand context before translating. Question-word translations such as 'what', 'when', 'where', and 'how' carry different Malay equivalents depending on whether they appear in a question or in a descriptive heading. E.g. what - perihal instead of apakah, when - masa instead of bila, where - tempat instead of di mana, how - cara instead of bagaimana when it's not an interrogative sentence
-  - *Source:* "What is Location Services (heading, not a question)" → *Target:* "Perihal Perkhidmatan Lokasi"
+  - *Source:* "What is Location Services" (heading, not a question) → *Target:* "Perihal Perkhidmatan Lokasi"
 
 - **Avoid Hanging Sentences**: Translations must be grammatically complete. Do not produce 'ayat tergantung' (hanging sentences) where a phrase is left without a proper grammatical ending. E.g.: What would you like to use? —> Apakah yang anda mahu gunakan? Instead of Yang anda mahu gunakan?
   - *Source:* "What would you like to use?" → *Target:* "Apakah yang anda mahu gunakan?"

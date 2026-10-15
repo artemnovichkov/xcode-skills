@@ -37,7 +37,7 @@
 
 ## Measurements
 
-- **Measurements — No Conversion; Specific Spacing Rules**: Do not convert imperial to metric units. Place a non-breaking space between a number and its unit symbol (e.g. 3 cm, 25 ºC), but write the percent sign before the number with no space (e.g. %30). Time abbreviations dk. and sa. take a period; SI units (cm, m, kg) do not.
+- **Measurements — No Conversion Except Illustrative Values; Specific Spacing Rules**: Generally, do not convert imperial measurements to metric. The exception is an illustrative source measurement: localize it and round the Turkish value. Place a non-breaking space between a number and its unit symbol (e.g. 3 cm, 25 ºC), but write the percent sign before the number with no space (e.g. %30). Time abbreviations dk. and sa. take a period; SI units (cm, m, kg) do not.
   - *Source:* "2 GB" → *Target:* "2 GB"
   - *Source:* "6 ft" → *Target:* "6 ft" (keep imperial units; do not convert to metric)
 

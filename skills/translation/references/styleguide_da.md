@@ -93,7 +93,7 @@
 
 ## Measurements
 
-- **Do Not Convert Imperial to Metric in Sentences**: Do not convert units such as inches to centimetres in software strings or sentences.
+- **Do Not Convert Imperial to Metric in Sentences**: Generally, do not convert units such as inches to centimeters in software strings or sentences.
   - *Source:* "11\" MacBook Air" → *Target:* "11\" MacBook Air"
 
 ## Addresses

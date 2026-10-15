@@ -8,13 +8,13 @@
 ## Grammar
 
 - **Use Active and Passive Structures for Variety; Never Use 1st Person for System Actions**: Alternate between active and passive sentence structures to create natural variation. For progress notifications and inanimate system actions, always use the impersonal passive — never translate as if the device is speaking in the first person.
-  - *Source:* "Loading library…" → *Target:* "Ladataan kirjastoa… (not Lataan kirjastoa…)"
+  - *Source:* "Loading library…" → *Target:* "Ladataan kirjastoa…" (not "Lataan kirjastoa…")
 
 - **Simplify 'Are You Sure' Confirmation Strings**: Translate 'Are you sure you want to…' constructions into a direct, shorter Finnish form using the passive or a plain question. This sounds more natural and is considerably shorter. Use the English-modeled form only for second-level confirmation dialogs.
   - *Source:* "Are you sure you want to end navigation?" → *Target:* "Lopetetaanko navigointi?"
 
 - **Finnish Word Order: Subject–Verb–Object**: Follow Finnish SVO word order. Avoid translating English 'do X using Y' constructions literally — use an instrumental case instead, which is the natural Finnish structure.
-  - *Source:* "Browse the list using the arrow keys." → *Target:* "Selaa luetteloa nuolinäppäimillä. (not Selaa luetteloa käyttämällä nuolinäppäimiä.)"
+  - *Source:* "Browse the list using the arrow keys." → *Target:* "Selaa luetteloa nuolinäppäimillä." (not "Selaa luetteloa käyttämällä nuolinäppäimiä.")
 
 - **Avoid Non-Finite Clauses Except for Very Short Phrases**: Prefer subordinate clauses over non-finite clause constructions (lauseenvastike) as they are clearer and easier to read. Use non-finite forms only for very short (1–2 word) subordinate equivalents where they are idiomatic.
   - *Source:* "Unlock after startup so you can use the device." → *Target:* "Avaa lukitus käynnistyksen jälkeen, jotta voit käyttää laitetta."
@@ -61,7 +61,7 @@
 ## Abbreviations
 
 - **Avoid Abbreviations in Software; Use Full Words**: Do not abbreviate words in software translations unless every other option has been exhausted. Instead of abbreviating, try rewording to make the string shorter. In general, prefer full words over abbreviations.
-  - *Source:* "Restart (too long)" → *Target:* "If 'Käynnistä uudelleen' does not fit, remove 'uudelleen': 'Käynnistä'"
+  - *Source:* "Restart" (too long) → *Target:* If 'Käynnistä uudelleen' does not fit, remove 'uudelleen': 'Käynnistä'
 
 ## Trademarks And Product Names
 
@@ -76,8 +76,8 @@
 ## Interface Elements
 
 - **Commands Use Imperative; Menu Names Prefer Verb Form; Titles Use Nouns**: Menu command items must use the 2nd person singular imperative (Lataa, Avaa, Sulje). Menu names prefer verb forms (Näytä, Lisää) though nouns are also used. Window and dialog titles sound better with nouns. Keyboard key names are written in lowercase as compound words.
-  - *Source:* "File (menu name)" → *Target:* "Arkisto"
-  - *Source:* "Download (command)" → *Target:* "Lataa"
+  - *Source:* "File" (menu name) → *Target:* "Arkisto"
+  - *Source:* "Download" (command) → *Target:* "Lataa"
   - *Source:* "esc and control keys" → *Target:* "esc- ja control-näppäimet"
 
 ## Date And Time
@@ -87,25 +87,34 @@
 
 ## Measurements
 
-- **Do Not Convert Measurements; Use Number + Space + Unit**: Do not convert imperial measurements to metric. Always format measurements as number + space + unit. The degree sign is written without a space when used alone (10°) but with a space when combined with a scale letter (+20 °C).
+- **Do Not Convert Measurements; Use Number + Space + Unit**: Generally, do not convert imperial measurements to metric. Always format measurements as number + space + unit. The degree sign is written without a space when used alone (10°) but with a space when combined with a scale letter (+20 °C).
   - *Source:* "27-inch iMac" → *Target:* "27 tuuman iMac"
   - *Source:* "+20°C" → *Target:* "+20 °C"
   - *Source:* "5°" → *Target:* "5°"
 
 ## Names And Addresses
 
-- **Use Finnish Placeholder Names and Address Format**: Replace English placeholder names with locally-appropriate Finnish names; keep John Appleseed in English as an exception. Use Finnish postal address conventions for sample addresses. Example format: `Kauppakatu 5 C 24, 99999 Jokukylä`.
+- **Use Finnish Placeholder Names and Address Format**: Replace a generic placeholder name with a locally-appropriate Finnish name. If the source or the developer's comment indicates the name refers to a specific, real individual (rather than a generic placeholder), keep that person's actual name. Use Finnish postal address conventions for a sample address; leave a real address as-is. Example format: `Kauppakatu 5 C 24, 99999 Jokukylä`.
 
 ## Variables
 
-- **Keep Variables Intact; Use Nominative or Dummy Objects for Unknown Variables**: Preserve all variables exactly as they appear in the source. If the grammatical case of a variable's referent is unknown, translate so that the variable stands in nominative. Use a dummy object such as 'kohde' as a fallback, or reorder variables using positional notation (1$, 2$, etc.).
+- **Keep Variables Intact; Use Nominative or Dummy Objects for Unknown Variables**: Preserve all variables exactly as they appear in the source — except to add the `[tt]` technical-term flag described in the next rule. If the grammatical case of a variable's referent is unknown, translate so that the variable stands in nominative. Use a dummy object such as 'kohde' as a fallback, or reorder variables using positional notation (1$, 2$, etc.).
   - *Source:* "%@ cannot be downloaded." → *Target:* "%@ ei ole ladattavissa."
   - *Source:* "%@ Ratings for Version %@" → *Target:* "Versiolla %2$@ on %1$@ arviota."
+
+- **Add `[tt]` to a `%@` Variable That Takes a Hyphenated Compound**: `%[tt]@` is `%@` with smart-hyphen handling: the hyphen stays in the string after the variable, and at runtime the system inserts a space before it when the substituted value is two or more words, leaving the compound closed up for a single-word value. Add `[tt]` to a `%@` — `%@` → `%[tt]@`, or with a positional index `%1$@` → `%1$[tt]@` — when a Finnish compound suffix is hyphenated onto the variable and the value is a name or technical term (an app, device, or item name, inferred from the source, the developer comment, the key, or the code).
+  - **Write the positional index before `[tt]`: `%1$[tt]@`, never `%[tt]1$@`.**
+  - Add `[tt]` only when the code formats the string with a localized API — `String(localized:)`, `LocalizedStringResource`, `Text()`, `localizedStringWithFormat`, or `String(format:locale:)` with a matching locale. With `String(format:)` / `stringWithFormat` the flag is silently ignored.
+  - Do not add `[tt]` when the value is a number, date, duration, count, URL, email address, file path, or image/icon name.
+  - Do not add `[tt]` when the value is set off on both sides — inside quotation marks or parentheses, or comma-separated — since nothing is compounded onto it there.
+  - When in doubt, leave `%@` unchanged: a plain `%@` is always safe, whereas a wrongly written `[tt]` can silently change what the string renders.
+  - *Source:* "Open the %@ app" → *Target:* "Avaa %[tt]@-appi" (value is a device or app name — the runtime writes Avaa Apple TV -appi for a two-word value and Avaa Safari-appi for a one-word value)
+  - *Source:* "%1$@ was installed by the Apple ID %2$@." → *Target:* "%1$[tt]@-appi asennettiin Apple ID:llä %2$@." (the app name takes `%1$[tt]@` with the index before `[tt]`; the Apple ID `%2$@` stays plain, since an account identifier is not a name or technical term)
 
 ## General
 
 - **Currency**: Place currency symbols after the number, separated by whitespace.
-  - *Source:* "USD 00,000.00" → *Target:* "00.000,00 USD"
+  - *Source:* "USD 1,234.50" → *Target:* "1 234,50 USD"
 
 - **Forms of address**: When English uses the word "Dear" at the start of letters or messages, use "Hei" instead. In very formal texts, "Hyvä" may be used. Omit the comma in the end of salutations.
   - *Source:* "Dear Lisa," → *Target:* "Hei Liisa"

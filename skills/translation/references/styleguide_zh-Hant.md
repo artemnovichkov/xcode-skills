@@ -33,9 +33,9 @@
 - **Space between date and time or date and week**: Space should be kept for date/time, date/week, etc.
   - *Source:* "On %1$@, at %2$@, %3$@ wrote:\n\n" → *Target:* "%3$@於%1$@ %2$@寫道：\n\n"
 
-## Measurements
+## Measurements and Units
 
-- **Do Not Convert Measurements; Keep Digital Storage Units in English Singular**: Do not convert imperial to metric in software strings. Storage units (bit, byte, kilobyte, KB, MB, GB, TB, etc.) stay in English singular form when used as measurements. Use the standard abbreviations (KB/MB/GB/TB/PB/EB/ZB/YB) for larger units rather than spelling them out. When units are used descriptively (e.g., 16-bit color), translate them into Chinese.
+- **Do Not Convert Measurements; Keep Digital Storage Units in English Singular**: Generally, do not convert imperial to metric in software strings. Storage units (bit, byte, kilobyte, KB, MB, GB, TB, etc.) stay in English singular form when used as measurements. Use the standard abbreviations (KB/MB/GB/TB/PB/EB/ZB/YB) for larger units rather than spelling them out. When units are used descriptively (e.g., 16-bit color), translate them into Chinese.
   - *Source:* "Choose the size scale as kilobytes (KB), megabytes (MB), or gigabytes (GB)" → *Target:* "選擇以KB、MB或GB作為大小單位"
   - *Source:* "64 bit processor" → *Target:* "64位元處理器"
 
@@ -103,13 +103,17 @@
 - **Preserve All Variables; Number Them When Reordered**: Keep every runtime variable (%@, %d, %1$@, ^1, $1, etc.) exactly as in the source — except to add the `[tt]` technical-term flag described in the next rule. Never change a variable's format in any other way. When reordering two or more variables, number all of them with positional markers.
   - *Source:* "%@ at %@ on %@" → *Target:* "%3$@%2$@%1$@"
 
-- **Add `[tt]` to a `%@` Variable That Holds a Name or Technical Term**: `%[tt]@` asks the system to wrap the substituted value in corner brackets 「…」 at runtime, so a name or technical term is quoted correctly whether it arrives as Latin or Chinese text. Add `[tt]` to a `%@` only when BOTH hold: (a) the string is formatted with a modern localized API (`String(localized:)`, `localizedStringWithFormat`, `Text()`, or `LocalizedStringResource`) — never `String(format:)`, where a literal `%[tt]@` can appear in the UI; and (b) the value is a name, app name, or technical term (inferred from the source, the developer comment, the key, or the code). `[tt]` attaches only to `%@` object specifiers (never `%d`, `%f`, `%ld`), and takes the positional form `%2$[tt]@` when variables are reordered.
+- **Add `[tt]` to a `%@` Variable That Holds a Name or Technical Term**: `%[tt]@` asks the system to wrap the substituted value in corner brackets 「…」 at runtime when the value is Chinese, and to leave a Latin value unbracketed. Add `[tt]` to a `%@` only when BOTH hold: (a) the string is formatted with a localized API (`String(localized:)`, `LocalizedStringResource`, `Text()`, `localizedStringWithFormat`, or `String(format:locale:)` with a matching locale) — never `String(format:)` / `stringWithFormat`, where the flag is silently ignored; and (b) the value is a name, app name, or technical term (inferred from the source, the developer comment, the key, or the code). `[tt]` attaches only to `%@` object specifiers (never `%d`, `%f`, `%ld`), and takes the positional form `%2$[tt]@` when variables are reordered.
+  - **Write the positional index before `[tt]`: `%2$[tt]@`, never `%[tt]2$@`.**
   - Do not add `[tt]` when the value is a number, date, duration, count, URL, email address, file path, or image/icon name.
   - Do not add `[tt]` when the value is already set off on both sides in the source — for example already inside 「」, quotation marks, or parentheses — because the runtime brackets would double up.
-  - When in doubt, leave `%@` unchanged: a plain `%@` is always safe, whereas a wrong `%[tt]@` can ship a literal token.
-  - *Source:* "Open %@" → *Target:* "開啟%[tt]@" (value is an app name — the runtime wraps it in 「」, e.g. 開啟「⋯」)
+  - When the variable sits directly against English text such as "App", write 「」 around the variable yourself instead of using `[tt]`: the value may arrive in either script, and `[tt]` brackets only a Chinese one. A Latin value would not receive quotes and would run into the neighboring word. Hard-code brackets to keep the boundary clear for whichever script is used as value at runtime.
+  - When in doubt, leave `%@` unchanged: a plain `%@` is always safe, whereas a wrongly written `[tt]` can silently change what the string renders.
+  - *Source:* "Open %@" → *Target:* "開啟%[tt]@" (value is an app name — at runtime a Chinese value is bracketed, e.g. 開啟「相片」, and a Latin value is not, e.g. 開啟Safari)
   - *Source:* "Please go to %@ and sign out" → *Target:* "請前往%[tt]@登出" (value is a settings section — the runtime wraps it in 「」, e.g. 請前往「帳戶設定」登出)
+  - *Source:* "%@ and %ld other apps were installed on another Apple TV by the Apple ID %@." → *Target:* "已用Apple ID %3$@在其他Apple TV上安裝%1$[tt]@和其他%2$ld個App。" (reordered with positional markers — the app name takes `%1$[tt]@` with the index before `[tt]`; the Apple ID `%3$@` stays plain, since an account identifier is not a name or technical term)
   - *Source:* "Delete \u201C%@\u201D?" → *Target:* "要刪除「%@」嗎？" (value already set off by 「」 — do not add `[tt]`)
+  - *Source:* "Now, get the %@ app." → *Target:* "現在請取得「%@」App。" (the variable sits directly against English "app" — bracket it instead of using `[tt]`)
 
 ## General Advice
 

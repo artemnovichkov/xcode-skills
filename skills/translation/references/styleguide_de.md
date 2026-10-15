@@ -24,6 +24,10 @@
 
 - **Units have no plural**: German units never take a plural form — "2 GB", "100 Byte" (not "Bytes"). Insert a non-breaking space between number and unit. For playback speed, no space before "x": "1,5x".
 
+- **Do not convert measurements**: Generally, do not convert imperial measurements to metric when they appear in sentences or phrases — for example, do not convert inches to centimeters.
+
+- **Inch mark in product names**: In product names, use the double prime ″ (\u2033) for inches ("iPad Pro 12.9-inch" → "iPad Pro 12,9\u2033").
+
 - **App name vs. service name distinction**: The translated app name uses German quotes and German terms ("die Musik-App", \u201EMusik\u201C), while the trademarked service name stays in English ("Apple Music"). Compounds with English service names use a hyphen: "Apple Music-App".
 
 - **Key terminology diverging from Windows/common usage**: Apple German uses distinct terms — "sichern" (not "speichern") for save, "Taste" (not "Schaltfläche") for button, "Zeiger" (not "Cursor") for pointer, "Menü \u201EAblage\u201C" (not "Datei") for File menu, "streichen" (not "wischen") for swipe, "Batterie" (not "Akku") for battery.

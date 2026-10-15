@@ -7,8 +7,8 @@
 
 ## Abbreviations
 
-- **Avoid Abbreviations — Use Full Forms**: Do not shorten translated words to fit space-constrained UI strings — keep the full Telugu or transliterated form even when it makes the string longer. When abbreviation is absolutely unavoidable, denote it with a period and ensure the shortened term is unambiguous.
-  - *Source:* "Number" → *Target:* "సంఖ్య" (abbreviate as "సం." with a period only when forced by a character limit)
+- **Avoid Abbreviations — Use Full Forms**: Keep the full Telugu or transliterated form by default, even when it makes the string longer; abbreviate only when the source itself uses an abbreviation or the translation is found to be clipped or truncated. When abbreviating, denote the Telugu abbreviation with a period and ensure the shortened term is unambiguous.
+  - *Source:* "Number" → *Target:* "సంఖ్య"
 
 ## Acronyms
 
@@ -105,7 +105,7 @@
 - **Do Not Add Helping Verb to Standalone Command Terms**: Certain standalone command terms do not require a helping verb. These include: Save, Cut, Duplicate, Cancel, Redeem, Share, Insert, Copy, Paste, Delete. Translate or transliterate them as-is without appending చేయండి.
   - *Source:* "Cancel" → *Target:* "రద్దు"
 
-## Measurements
+## Measurements and Units
 
 - **Translate or Transliterate Measurement Units in Full Written Form; Retain Abbreviations in English**: When a measurement unit appears in its full written form, translate or transliterate it into Telugu (e.g. కిలోమీటర్, సెంటీమీటర్, అడుగులు). When it appears in abbreviated form, keep the English abbreviation unchanged. Always use international numerals with measurement units.
   - *Source:* "Kilometer (km)" → *Target:* "కిలోమీటర్ (km)"
@@ -113,7 +113,7 @@
 - **Always Retain Electronic and Computing Units in English**: Electronic or computing units such as MB, GB, TB, KB, 1080p, 720p must always be left in English regardless of whether they appear in full or abbreviated form. Always leave a space between the number and the unit.
   - *Source:* "2 GB" → *Target:* "2 GB"
 
-- **Do Not Convert Measurement Units**: Do not convert measurements (e.g. imperial to metric) to local measurements. For example, do not convert inches to cm. Keep the source units as given.
+- **Do Not Convert Measurement Units**: Generally, do not convert measurements (e.g. imperial to metric) to local measurements. For example, do not convert inches to cm. Keep the source units as given.
 
 ## Names And Addresses
 
@@ -123,10 +123,10 @@
 
 ## Numerals
 
-- **Use Correct Ordinal Number Format in Telugu**: Hard-coded numbers must be in international numeral form (0–9). Ordinals follow the pattern మొదటి/1వ, రెండవ/2వ, మూడవ/3వ and so on. Always leave a space between a number and the following word or unit.
+- **Use Correct Ordinal Number Format in Telugu**: Ordinals follow the pattern మొదటి/1వ, రెండవ/2వ, మూడవ/3వ and so on. Always leave a space between a number and the following word or unit.
   - *Source:* "First / 1st" → *Target:* "మొదటి / 1వ"
 
-- **Apply Indian Comma Grouping System for Large Numbers**: The Indian comma system must be used for large numbers - commas are placed after thousands, then lakhs and crores (e.g. 10,00,000 not 1,000,000). Hard-coded numbers must always be in international numeral form (0-9). Always leave a space between a number and the following word or unit.
+- **Apply Indian Comma Grouping System for Large Numbers**: The Indian comma system must be used for large numbers - commas are placed after thousands, then lakhs and crores (e.g. 10,00,000 not 1,000,000). Keep hardcoded numbers as international digits (0–9) and do not convert them to native Telugu numerals, as whether they ultimately display as international or native is a user setting the translation can't see. Always leave a space between a number and the following word or unit.
   - *Source:* "10,00,000 songs" → *Target:* "10,00,000 పాటలు"
 
 ## Punctuation

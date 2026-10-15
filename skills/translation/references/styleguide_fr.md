@@ -20,6 +20,8 @@
 
 - **Numerals**: Non-breaking space as thousands separator (5 000), comma as decimal separator (3,8 mètres). Unlike English, the leading zero is never dropped ("0,5 m" not ",5 m"). Trailing zeros can be dropped ("1,8 mm" not "1,800 mm"). Do not modify decimal points inside variables like "%.1f".
 
+- **Measurements**: Generally, do not convert imperial measurements to metric. The exception is an approximate source value, which takes an approximate metric equivalent ("within 30 feet of your computer" → "à une distance maximale de 9 m de l\u2019ordinateur"). Never use a quotation mark as an abbreviation for inches. French uses the SI abbreviations, which have no inch form, so keep what mark the source uses or spell the unit out.
+
 - **Special characters**: "&" must be replaced by "et" and "@" by "à" when used as words in a phrase ("Nom et extension" not "Nom & extension"). Currency symbols go after the amount with a non-breaking space (120 €).
 
 - **Minutes abbreviation**: Use "min" for minutes (not "mn" or "m"). "m" can be confused with meters. E.g., "Il y a 10 min" not "Il y a 10 m".

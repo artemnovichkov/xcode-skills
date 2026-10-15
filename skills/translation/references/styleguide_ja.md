@@ -49,7 +49,7 @@
 
 ## Measurements
 
-- **Unit Handling: Spell Out or Keep Per Context**: Do not convert imperial measurements to metric. For abbreviated units, keep them as-is. Translate fully spelled-out units into Japanese (e.g., 'inch' → インチ). Exception: time abbreviations such as 'h', 'm', 's' should be translated to 時間, 分, 秒 unless space is constrained.
+- **Unit Handling: Spell Out or Keep Per Context**: Generally, do not convert imperial measurements to metric. For abbreviated units, keep them as-is. Translate fully spelled-out units into Japanese (e.g., 'inch' → インチ). Exception: time abbreviations such as 'h', 'm', 's' should be translated to 時間, 分, 秒 unless space is constrained.
   - *Source:* "h" → *Target:* "時間"
   - *Source:* "inch" → *Target:* "インチ"
 
@@ -70,8 +70,18 @@
 
 ## Variables
 
-- **Preserve Variables and Add Positional Markers When Reordering**: Never alter variable tokens such as %@, %d, or %lu. If multiple variables must be reordered to produce natural Japanese, add positional markers (e.g., %1$@, %2$@) to every variable in the string. Use the %[tt]@ format when a variable holds a Japanese App name such as “探す”  that needs automatic quoting.
+- **Preserve Variables and Add Positional Markers When Reordering**: Never alter variable tokens such as %@, %d, or %lu — except to add the `[tt]` technical-term flag described in the next rule. If multiple variables must be reordered to produce natural Japanese, add positional markers (e.g., %1$@, %2$@) to every variable in the string.
   - *Source:* "Leave now: It will take %@ to get to %@ on %@ by car." → *Target:* "今出発: %2$@まで車で%3$@を通って%1$@かかります。"
+
+- **Add `[tt]` to a `%@` Variable That Holds a Name or Technical Term**: `%[tt]@` asks the system to place curly double quotation marks “ (\u201C) and ” (\u201D) around the substituted value at runtime when the value is a Japanese name, and to leave a Latin value unquoted. Add `[tt]` to a `%@` — `%@` → `%[tt]@`, or with a positional marker `%1$@` → `%1$[tt]@` — when the value is an app name, a menu or command name, a file or folder name, or another name or technical term (inferred from the source, the developer comment, the key, or the code).
+  - **Write the positional marker before `[tt]`: `%1$[tt]@`, never `%[tt]1$@`.**
+  - Add `[tt]` only when the code formats the string with a localized API — `String(localized:)`, `LocalizedStringResource`, `Text()`, `localizedStringWithFormat`, or `String(format:locale:)` with a matching locale. With `String(format:)` / `stringWithFormat` the flag is silently ignored.
+  - Do not add `[tt]` when the value is a number, date, duration, count, URL, email address, file path, or image/icon name.
+  - Do not add `[tt]` when the value is already set off on both sides — already inside “ ”, other quotation marks, or parentheses — because the runtime quotation marks would double up.
+  - When the variable sits directly against English text such as "App", write the quotation marks yourself instead of using `[tt]`: the value may arrive in either script, and `[tt]` quotes only a Japanese one — a Latin value gets nothing and runs into the neighboring word (`%[tt]@App` renders as `SafariApp`). Hard-code “ (\u201C) and ” (\u201D) around the variable, and per the right-double-quote spacing rule put a single-byte space after ” when a single-byte character follows: `“%@” App`.
+  - When in doubt, leave `%@` unchanged: a plain `%@` is always safe, whereas a wrongly written `[tt]` can silently change what the string renders.
+  - *Source:* "%@ App" → *Target:* "%[tt]@アプリ" (value is an app name — at runtime a Japanese value is quoted, e.g. “写真”アプリ, and a Latin value is not, e.g. Safariアプリ)
+  - *Source:* "This attachment will be saved to the note %1$@ in your shared folder %2$@." → *Target:* "この添付ファイルは、%2$[tt]@共有フォルダの%1$[tt]@メモに保存されます。" (both values may be Japanese or English)
 
 ## Orthography
 
@@ -99,7 +109,7 @@
 - **No Space Between English and Japanese**: A space should not be placed between English and Japanese words.
   - *Source:* "Apple Watch cellular plans." → *Target:* "Apple Watchのモバイル通信プラン"
 
-- **Spacing Between Numbers and Units**: A single-byte space between a numeric value (or variable) and a unit should strictly follow the English source text. If the source has a space, include a space in the translation. If the source does not have a space, do not include a space.
+- **Spacing Between Numbers and Units**: A single-byte space between a numeric value (or variable) and a unit should strictly follow the source text. If the source has a space, include a space in the translation. If the source does not have a space, do not include a space.
   - *Source:* "%@ GB" → *Target:* "%@ GB"
   - *Source:* "%@GB" → *Target:* "%@GB"
 

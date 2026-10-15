@@ -94,7 +94,7 @@
 
 ## Abbreviations
 
-- **Spell Out Abbreviations — Use Non-Breaking Spaces in Multi-Word Abbreviations**: Translate English abbreviations as fully spelled-out words when there are no space restrictions. Use non-breaking spaces in multi-word abbreviations. Abbreviations include periods; symbols do not.
+- **Spell Out Abbreviations — Use Non-Breaking Spaces in Multi-Word Abbreviations**: Spell out abbreviations as full words by default. If the source uses an abbreviation, keep it; otherwise, abbreviate only when the translation is found to be clipped or truncated. When abbreviating, use the corresponding Spanish abbreviation. Use non-breaking spaces in multi-word abbreviations. Abbreviations take a period; symbols do not.
   - *Source:* "e.g." → *Target:* "p. ej." (use   between "p." and "ej.")
   - *Source:* "U.S." → *Target:* "EE. UU." (use   between "EE." and "UU.")
 
@@ -146,7 +146,7 @@
 
 ## Addresses
 
-- **Use Spanish Postal Address Format**: Replace English placeholder addresses with the standard Spanish postal address format. Example format: `Calle, 123, Localidad, C. P. Provincia`.
+- **Use Spanish Postal Address Format**: Replace an English placeholder address with the standard Spanish postal address format; leave a real address as-is. Example format: `Calle, 123, Localidad, C. P. Provincia`.
 
 ## Special Characters
 
@@ -211,7 +211,7 @@
 
 ## Measurements
 
-- **Do Not Convert Units — Keep Same as English**: Do not convert units except when the English measurement is illustrative. Unit symbols are lowercase, have no periods, and no plural forms.
+- **Do Not Convert Units — Keep Same as the Source**: Generally, do not convert units; convert only when the source measurement is illustrative. Unit symbols are lowercase, have no periods, and no plural forms.
   - *Source:* "Your device needs to be within 30 feet of your computer." → *Target:* "El dispositivo debe estar en un radio de 9 metros con respecto al ordenador."
 
 ## Trademarks And Product Names

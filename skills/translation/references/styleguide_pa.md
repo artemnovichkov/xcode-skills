@@ -36,7 +36,7 @@
 - **Date and Time Format**: Use international numerals in hardcoded dates and times. Preferred date format: 17 ਮਾਰਚ 2022 (correspondence) and DD/MM/YYYY (long). Use colon as time separator with no surrounding spaces. Do not localize AM/PM.
   - *Source:* "March 17, 2022 / 7:15 AM" → *Target:* "17 ਮਾਰਚ 2022 / 7:15 AM"
 
-## Measurements
+## Measurements and Units
 
 - **Do Not Convert Measurement Units**: Retain the measurement system from the source. Electronics and computing units (GB, MB, KB, Hz, dB) must remain in English. Keep numeric values as the source's digits. Use international numerals for all numeric values.
   - *Source:* "8 GB / 1080p" → *Target:* "8 GB / 1080p"
@@ -84,7 +84,7 @@
   - *Source:* "Do task one, two, and three." → *Target:* "ਕੰਮ ਇੱਕ, ਦੋ ਅਤੇ ਤਿੰਨ ਕਰੋ।" (no comma before ਅਤੇ)
 
 - **Chhut Marodi: Apostrophe for Shortened Words**: Chhut Marodi shortens words: ਇਸ ਵਿੱਚ becomes ਇਸ 'ਚ and ਇਸ ਉੱਤੇ becomes ਇਸ 'ਤੇ. Always use a straight apostrophe (U+0027) for the shortened form, not the right single quotation mark ’ (\u2019).
-  - *Source:* "ਇਸ ਵਿੱਚ / ਇਸ ਉੱਤੇ" → *Target:* "ਇਸ 'ਚ / ਇਸ 'ਤੇ"
+  - *Example:* "ਇਸ ਵਿੱਚ / ਇਸ ਉੱਤੇ" → "ਇਸ 'ਚ / ਇਸ 'ਤੇ"
 
 ## Grammar
 
@@ -95,7 +95,10 @@
   - *Source:* "Your account includes subscriber podcasts." → *Target:* "ਤੁਹਾਡੇ ਖਾਤੇ ਵਿੱਚ ਸਬਸਕ੍ਰਾਈਬਰ ਪੌਡਕਾਸਟ ਸ਼ਾਮਲ ਹਨ।" (ਖਾਤੇ not ਖਾਤਾ)
 
 - **Vowel Mapping and Vowel Drop Rule**: Map English vowels as follows: short 'i' → ਿ◌ (ਡਿਵਾਈਸ), long 'i' → ◌ੀ (ਸ਼ੀਟ), short 'u' → ◌ੁ (ਅਕਾਊਂਟ), long 'u' → ◌ੂ (ਟੂਲ), long 'O' → ◌ੋ (ਨੋਟ), 'aw/ou' → ◌ੌ (ਮੌਮ), 'ay' → ◌ੇ (ਡੇਟ), 'ae/a' → ◌ੈ (ਐਪ). Vowel Drop Rule: When English words enter Punjabi through everyday use, unstressed vowels are dropped or shifted to match Punjabi phonology. Always follow how the word is actually spoken in Punjabi, not how it is spelled in English.
-  - *Source:* "Content / Comment / Call / America" → *Target:* "ਕੰਟੈਂਟ (not ਕੌਂਟੈਂਟ) / ਕਮੈਂਟ (not ਕੌਮੈਂਟ) / ਕਾਲ (not ਕੌਲ) / ਅਮਰੀਕਾ (not ਅਮੈਰਿਕਾ)"
+  - *Source:* "Content" → *Target:* "ਕੰਟੈਂਟ" (not "ਕੌਂਟੈਂਟ")
+  - *Source:* "Comment" → *Target:* "ਕਮੈਂਟ" (not "ਕੌਮੈਂਟ")
+  - *Source:* "Call" → *Target:* "ਕਾਲ" (not "ਕੌਲ")
+  - *Source:* "America" → *Target:* "ਅਮਰੀਕਾ" (not "ਅਮੈਰਿਕਾ")
 
 - **Mapping S/Sh, J/Z and F Sounds**: For 'S' sound use ਸ (ਸੋਰਸ). For 'Sh' sound use ਸ਼ with Nuqta (ਸ਼ੀਟ). For 'J' sound use ਜ. For 'Z' sound use ਜ਼ with Nuqta (ਜ਼ਿਊਰਿਖ). For 'F' sound use ਫ਼ with Nuqta (ਫ਼ਾਈਲ). Nuqta is mandatory for all three — ਜ਼, ਫ਼, ਸ਼ must never be written without it.
   - *Source:* "Source / Sheet / Zone / File / Zurich" → *Target:* "ਸੋਰਸ / ਸ਼ੀਟ / ਜ਼ੋਨ / ਫ਼ਾਈਲ / ਜ਼ਿਊਰਿਖ"
@@ -104,13 +107,17 @@
   - *Source:* "Notes / Wings / Washington / France" → *Target:* "ਨੋਟਸ / ਵਿੰਗਜ਼ / ਵਾਸ਼ਿੰਗਟਨ / ਫ਼ਰਾਂਸ"
 
 - **Consonant Clusters and Halant Rules**: For English transliteration, only two subjoined forms are used: ੍ਰ (half Ra) and ੍ਹ (half Ha). Do not apply Halant to any other consonant. Rule 1: 'r' cluster + short vowel → use Halant ੍ਰ (ਸਟ੍ਰਿੰਗ, ਸਟ੍ਰੈਂਥ). Rule 2: 'r' cluster + long vowel → use full ਰ (ਸਕਰੀਨ, ਗਰਾਊਂਡ). Exception to Rule 2: if the word has an established standardized Punjabi spelling, always prefer that over the rule (ਗ੍ਰੀਨ not ਗਰੀਨ). Rule 3: Punjabi proper nouns never use Halant regardless of cluster (ਗਰੇਵਾਲ, ਸ਼ਰਮਾ)
-  - *Source:* "String / Screen / Green / Grewal" → *Target:* "ਸਟ੍ਰਿੰਗ (Rule 1) / ਸਕਰੀਨ (Rule 2) / ਗ੍ਰੀਨ (Exception) / ਗਰੇਵਾਲ (Rule 3)"
+  - *Source:* "String" → *Target:* "ਸਟ੍ਰਿੰਗ" (Rule 1)
+  - *Source:* "Screen" → *Target:* "ਸਕਰੀਨ" (Rule 2)
+  - *Source:* "Green" → *Target:* "ਗ੍ਰੀਨ" (Exception)
+  - *Source:* "Grewal" → *Target:* "ਗਰੇਵਾਲ" (Rule 3)
 
 - **Transliteration Pronunciation Standard**: Use ODE (Oxford Dictionary of English) as the reference for standard pronunciation when mapping English sounds to Gurmukhi. Always base transliteration on how the word is actually pronounced, not how it is spelled in English.
   - *Source:* "File / Zone / America" → *Target:* "ਫ਼ਾਈਲ / ਜ਼ੋਨ / ਅਮਰੀਕਾ"
 
 - **Headings: Noun Form by Default, Imperative for Creative Pages**: Headings default to noun/infinitive form (ਬਦਲਣਾ, ਬਣਾਉਣਾ) for standard instructional strings. For creative or promotional strings such as welcome screens and feature highlights, imperative verb form (ਖਿੱਚੋ, ਬਣਾਓ) is acceptable and often preferred. Use judgment based on tone and purpose.
-  - *Source:* "Change iPhone Sounds (instructional) / Take your best shot (creative)" → *Target:* "iPhone ਦੀਆਂ ਧੁਨੀਆਂ ਬਦਲਣਾ / ਬਿਹਤਰੀਨ ਤਸਵੀਰਾਂ ਖਿੱਚੋ"
+  - *Source:* "Change iPhone Sounds" (instructional) → *Target:* "iPhone ਦੀਆਂ ਧੁਨੀਆਂ ਬਦਲਣਾ"
+  - *Source:* "Take your best shot" (creative) → *Target:* "ਬਿਹਤਰੀਨ ਤਸਵੀਰਾਂ ਖਿੱਚੋ"
 
 ## Interface Elements
 

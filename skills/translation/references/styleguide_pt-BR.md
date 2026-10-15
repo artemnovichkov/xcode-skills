@@ -64,7 +64,7 @@
 
 ## Measurements
 
-- **Do Not Convert Measurements; Always Space Before Unit Symbols**: Do not convert imperial units to metric or vice versa. Never use a double quote as an abbreviation for inch. Always insert a space between a number and its unit symbol; unit abbreviations never take a trailing period.
+- **Do Not Convert Measurements; Always Space Before Unit Symbols**: Generally, do not convert imperial units to metric or vice versa. Never use a double quote as an abbreviation for inch. Always insert a space between a number and its unit symbol; unit abbreviations never take a trailing period.
   - *Source:* "2GB" → *Target:* "2 GB"
 
 ## Numerals
@@ -89,7 +89,7 @@
 
 - **Do Not Translate Physical Keyboard Key Names**: All key names printed on a physical Apple keyboard must remain untranslated and should be in uppercase. The only exceptions are iOS/iPadOS software keyboard keys: 'Retorno', 'Espaço', and 'Ir'.
   - *Source:* "Caps Lock, Shift, Control, Option, Command" → *Target:* "Caps Lock, Shift, Control, Option, Command"
-  - *Source:* "Return (iOS software keyboard)" → *Target:* "Retorno"
+  - *Source:* "Return" (iOS software keyboard) → *Target:* "Retorno"
 
 ## Trademarks And Product Names
 

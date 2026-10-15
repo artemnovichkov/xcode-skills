@@ -103,8 +103,8 @@
 
 ## Abbreviations
 
-- **Spell Out Abbreviations When Space Allows**: Abbreviations are much less common in Spanish than in English. Fully spell out English abbreviations whenever space permits. Abbreviating by truncating the last letters is a last resort — try rewording the string first before abbreviating.
-  - *Source:* "disp." → *Target:* "dispositivo" (preferred when space allows)
+- **Spell Out Abbreviations**: Abbreviations are much less common in Spanish than in English, so spell out English abbreviations in full by default, even when the source is abbreviated. Abbreviate only if the translation is found to be clipped or truncated and rewording for concision can't make it fit. When abbreviating, use a commonly known Spanish abbreviation.
+  - *Source:* "Dept." → *Target:* "Departamento"
 
 ## Acronyms
 
@@ -124,7 +124,7 @@
 
 ## Measurements
 
-- **Convert Imperial to Metric and Round**: English measurements in imperial units must be converted to the metric system. Round the result to a natural value and add the original if helpful for context.
+- **Convert Imperial to Metric and Round**: Measurements in imperial units must be converted to the metric system. Round the result to a natural value.
   - *Source:* "Your device needs to be within 30 feet of your computer." → *Target:* "El dispositivo debe estar en un radio de 9 metros con respecto a tu computadora."
 
 ## Date And Time
@@ -134,7 +134,7 @@
 
 ## Addresses
 
-- **Use Latin American Address Format**: Replace English postal address placeholders with Latin American conventions. Mexican postal address format is a common default. Example format: `Calle 123, Colonia, CP, Estado`.
+- **Use Latin American Address Format**: Replace an English placeholder address with Latin American conventions; leave a real address as-is. Mexican postal address format is a common default. Example format: `Calle 123, Colonia, CP, Estado`.
 
 ## Trademarks And Product Names
 

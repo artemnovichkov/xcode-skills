@@ -20,6 +20,8 @@
 
 - **Time colon, space thousands, decimal comma**: Per CLDR, the time separator is a colon ("kl. 14:00"). Norwegian uses space as the thousands separator and comma as the decimal separator ("1 000 000", "3,5 km"). Insert non-breaking spaces between numbers and units ("2 GB").
 
+- **Measurements**: For inches, use the double prime ″ (\u2033) or write out "tomme"/"tommer" — never "in" ("1 inch" → "1 tomme").
+
 - **Ellipsis always in software**: Always use the pre-composed ellipsis character instead of three periods, regardless of source. In software, skip the space before the ellipsis due to space constraints ("Arkiver som…").
 
 - **Inclusive pronoun "hen"**: For singular "they" referring to a person of unspecified gender, do not translate as "he or she". Instead, rewrite using "person" or "vedkommende", or use the gender-neutral third-person pronoun "hen". Use diverse person names from multiple cultural backgrounds common in Norway, including Sami and immigrant-community names.

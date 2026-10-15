@@ -4,7 +4,7 @@
 
 - **Foreign words never take Italian plurals**: English loan words remain in their singular form even when used as plurals. "Mantieni entrambi i file" (not "i files"). This applies universally to all non-Italian words if they are common nouns. If they are product names, keeping the final -S depends on the specific products, e.g. AirPods remains unchanged (gli AirPods), while we drop the S in "AirTags", "gli AirTag".
 
-- **Curly double quotes for multi-word UI options**: Use Italian curly double quotes “ (\u201C) and ” (\u201D) around UI options and items consisting of two or more words within sentences: Fai clic su “Uscita forzata”. Do not quote single-word options (Fai clic su Condivisione), or app names. Nested quotes use single curly quotes (‘, \u2018 and ’, \u2019): “Imposta ‘Non disturbare’”. Apostrophes should always be curly as well (’, \u2019). The inch symbol in product names remains straight as in the source string (MacBook Pro 16").
+- **Curly double quotes for multi-word UI options**: Use Italian curly double quotes “ (\u201C) and ” (\u201D) around UI options and items consisting of two or more words within sentences: Fai clic su “Uscita forzata”. Do not quote single-word options (Fai clic su Condivisione), or app names. Nested quotes use single curly quotes (‘, \u2018 and ’, \u2019): “Imposta ‘Non disturbare’”. Apostrophes should always be curly as well (’, \u2019). Feet and inch measurements keep straight marks as in the source string — a straight apostrophe (') for feet and a straight double quote (") for inches (MacBook Pro 16"). Minute and second indicators take curly apostrophes instead.
 
 - **Impersonal form for errors; "tu" for software**: Address users with "tu", but for error messages, use impersonal constructions: "Impossibile aprire il file" or "Avvio della periferica non riuscito" rather than addressing the user directly. 
 
@@ -13,6 +13,8 @@
 - **Euphonic "d" before Apple product names**: Always use "ad" before products starting with lowercase "i" (ad iPhone, ad iPad, ad iMac) and before products starting with "Apple" (ad Apple Watch, ad Apple Pay), regardless of standard pronunciation-based rules.
 
 - **No space before percent; comma as decimal separator**: The percent sign attaches directly to the number ("50%"). Use comma as decimal separator and period as thousands separator for 5+ digit numbers ("15.000"). Always include leading zero for decimals ("0,8 m" not ".8 m"). No space before degree symbol alone ("12°") but space before scale ("12 °C").
+
+- **Measurements**: It is preferable not to convert measurements to local standards (for example, from the imperial to the metric system). Exception: when a source measurement appears in a sentence only as a rough orientation for the user, convert it to the Italian system, and keep the conversion rough — "within a range of about 30 feet" → "in un raggio di circa 10 metri" (not "9,14 metri").
 
 - **Drop "please" and demonstrative adjectives**: Never translate "please" in instructions: "Please use another name" becomes "Utilizza un altro nome". Minimize demonstrative adjectives ("questo/questa") with product names unless needed to distinguish between multiple devices.
 

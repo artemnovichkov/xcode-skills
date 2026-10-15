@@ -22,7 +22,7 @@
 
 ## Abbreviations
 
-- **Avoid Abbreviations in UI Strings**: Do not shorten words through abbreviations in software translations unless every other option has been exhausted. If a string is too long, request UI resizing rather than abbreviating.
+- **Avoid Abbreviations in UI Strings**: Keep the full form by default. If the source uses an abbreviation, keep it; otherwise, abbreviate only when the translation is found to be clipped or truncated. When abbreviating, use the corresponding Czech abbreviation.
 
 ## Acronyms
 
@@ -36,14 +36,14 @@
 
 ## Measurements
 
-- **Do Not Convert Measurements**: Never convert imperial measurements to metric (or vice versa). When English measurements are descriptive rather than technical, localize them and round to a natural Czech equivalent.
+- **Do Not Convert Measurements**: Generally, do not convert imperial measurements to metric (or vice versa). However, when source measurements are illustrative rather than technical, localize them and round to a natural Czech equivalent.
   - *Source:* "Your device needs to be within 30 feet of your computer." → *Target:* "Vaše zařízení se musí nacházet ve vzdálenosti do 9 metrů."
 
-- **Never Use Inch Symbol as Abbreviation**: The double-prime character (″) must not be used as an abbreviation for inches in Czech translations.
+- **Never Use a Quotation Mark as the Inch Abbreviation**: Do not use a quotation mark of either kind — straight " or curly “ (\u201C) — as an abbreviation for inches in Czech translations. Use the double prime ″ (\u2033) instead.
 
 ## Numerals
 
-- **Czech Numeral Format**: Use a space as the thousands separator and a comma as the decimal separator, following the Czech convention. For software strings, always defer to the system standard.
+- **Czech Numeral Format**: Use a space as the thousands separator and a comma as the decimal separator, following the Czech convention. Apply this to numbers hardcoded in the string; numbers inserted at runtime through format specifiers are formatted by the system.
   - *Source:* "123456.789" → *Target:* "123 456,789"
 
 ## Special Characters

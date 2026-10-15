@@ -11,7 +11,7 @@
   - *Source:* "%@ may not have arrived at their destination yet." → *Target:* "%@ ലക്ഷ്യസ്ഥാനത്ത് ഇതുവരെ എത്തിയിട്ടുണ്ടാവില്ല."
 
 - **Prefer Transliteration Over Unnatural or Archaic Malayalam Terms**: When a Malayalam equivalent is archaic, obscure, or not widely used in its specific context, transliterate the English term instead. Common technical terms like Desktop, Click, Menu, Installation should be transliterated because Malayalam users encounter them in that form daily.
-  - *Source:* "Installation" → *Target:* "ഇൻസ്റ്റലേഷൻ (not സ്ഥാപിക്കൽ)"
+  - *Source:* "Installation" → *Target:* "ഇൻസ്റ്റലേഷൻ" (not "സ്ഥാപിക്കൽ")
 
 ## Command Verb Form
 
@@ -39,9 +39,9 @@
 - **Date Format and Month/Day Names**: Write dates as DD Month YYYY in Malayalam (e.g., 03 ഓഗസ്റ്റ് 2001). Do not use numeric-only formats like 03.08.2001. Do not translate or localize AM/PM — keep it in English, matching source capitalization. Do not add Malayalam plural suffixes to units of time (use മൂന്ന് മണിക്കൂർ, not മൂന്ന് മണിക്കൂറുകൾ).
   - *Source:* "August 3, 2001" → *Target:* "3 ഓഗസ്റ്റ് 2001"
 
-## Measurements
+## Measurements and Units
 
-- **Retain Electronic and Computer Units in English**: Units related to electronics and computing (GB, KB, dB, kbps) must remain in English. Use °C and °F for temperature short forms. Do not convert imperial to metric.
+- **Retain Electronic and Computer Units in English**: Units related to electronics and computing (GB, KB, dB, kbps) must remain in English. Use °C and °F for temperature short forms. Generally, do not convert imperial to metric.
   - *Source:* "8 GB" → *Target:* "8 GB"
 
 ## Numerals

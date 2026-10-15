@@ -36,7 +36,7 @@
 
 ## Measurements
 
-- **Do Not Convert Measurement Units**: Keep measurements in the units used in the source — do not convert inches to centimeters or miles to kilometers. Insert a space between a quantity and its unit.
+- **Do Not Convert Measurement Units**: Generally, keep measurements in the units used in the source — do not convert inches to centimeters or miles to kilometers. Insert a space between a quantity and its unit.
   - *Source:* "Operating temperature: 32ºF to 122ºF (0ºC to 50ºC)" → *Target:* "Radna temperatura: 32 ºF do 122 ºF (0 ºC do 50 ºC)"
 
 ## Numerals
@@ -63,10 +63,6 @@
 - **Hyphens vs. Dashes**: Use a hyphen (no spaces) in compound words and for adding declension suffixes to abbreviations. Use an en-dash with spaces for 'from–to' ranges, reported speech, and vertical enumeration.
   - *Source:* "2010–2012" → *Target:* "2010. – 2012."
   - *Source:* "Zagreb–Split motorway" → *Target:* "autocesta Zagreb – Split"
-
-- **Plural Handling in Software Strings**: Croatian has multiple plural forms that cannot be served by a single string. Where a plural-aware format is not available (e.g. when the formatter isn't numerical), restructure to place the count in parentheses or after a colon to avoid incorrect agreement (e.g. 'Fotografije: %@' or 'Slanje fotografija (%@) na odredište').
-  - *Source:* "%@ photos" → *Target:* "Fotografije: %@"
-  - *Source:* "Sending %@ photos to destination." → *Target:* "Slanje fotografija (%@) na odredište."
 
 - **Declension in Concatenated Strings**: Variables inserted at runtime must remain in the Nominative case to work across different host strings. Adjust the host string to accommodate Nominative variables — for example, add a colon or restructure the phrase.
   - *Source:* "Download %@" → *Target:* "Preuzmi: %@"

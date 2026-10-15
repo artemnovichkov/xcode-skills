@@ -54,6 +54,7 @@ In Codex run `/skills` or type `$` to invoke one explicitly; otherwise they trig
 | `accessibility-sufficient-contrast-specialist` | Audits color contrast against WCAG 2.1 ratios for the Sufficient Contrast nutrition label. |
 | `translation-coordinator` | Coordinates translating a project or its `.xcstrings` catalogs: prepares languages, fetches untranslated strings, delegates, verifies. |
 | `translation` | Translates individual strings or small batches in String Catalogs. |
+| `xctrace` | Profiling with Instruments' CLI: capturing and reading `.trace`/`.atrc` files, call trees, symbolication, hang triage. |
 | `device-interaction` | Verifies app behavior on device/simulator via screenshots, UI hierarchy, touch input, and tvOS Siri Remote control. |
 
 ## Note

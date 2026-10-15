@@ -3,13 +3,13 @@
 ## Tone And Voice
 
 - **Smart but Casual Tone**: Write in a neutral, descriptive style that is closer to formal than informal, but never stiff or overly hip. Use clear and concise language — short, direct text is absorbed quickly. Avoid literal translations; the text should read naturally in Ukrainian as if it were never translated.
-  - *Source:* "We recommend" → *Target:* "Рекомендуємо (not Ми рекомендуємо)"
+  - *Source:* "We recommend" → *Target:* "Рекомендуємо" (not "Ми рекомендуємо")
 
 ## Abbreviations
 
-- **Avoid Abbreviations in Software; Use Ukrainian Equivalents**: Do not abbreviate words to fit a UI string. When a commonly used Ukrainian abbreviation exists for an English one, use it. Graphical abbreviations formed by truncation require a period; contractions do not.
+- **Avoid Abbreviations in Software; Use Ukrainian Equivalents**: Keep the full form by default; abbreviate only when the source itself uses an abbreviation or the translation is found to be clipped or truncated. When abbreviating, use a commonly used Ukrainian abbreviation where one exists. Graphical abbreviations formed by truncation require a period; contractions do not.
   - *Source:* "for example / e.g." → *Target:* "наприклад / напр."
-  - *Source:* "University" → *Target:* "ун-т"
+  - *Source:* "Univ." → *Target:* "ун-т"
 
 ## Acronyms
 
@@ -23,17 +23,18 @@
   - *Source:* "February 1, 2017" → *Target:* "1 лютого 2017 р."
   - *Source:* "02/01/17" → *Target:* "01.02.17"
 
+## Measurements
+
+- **Do Not Convert Units of Measure**: Generally, do not convert measurements (e.g. imperial to metric) to local measurements when they appear in sentences or phrases — do not convert inches to centimeters. When the source already gives both units, the order may be swapped so the metric value comes first.
+  - *Source:* "30 ft (10 m)" → *Target:* "10 м (30 футів)"
+
 ## Names And Addresses
 
-- **Ukrainian Sample Names and Address Format**: Use Ukrainian sample names instead of English defaults. Sample addresses should be translated into a Ukrainian format (street name with вул., city, postal code, Ukraine).
-  - *Source:* "John Doe" → *Target:* "Андрій Петренко"
-  - *Source:* "Jane Doe" → *Target:* "Оксана Петренко"
-  - *Source:* "1 Infinite Loop, Springfield" → *Target:* "вул. Лугова, 23, Черкаси"
+- **Ukrainian Sample Names and Address Format**: Replace a generic placeholder name with a Ukrainian one. If the source or the developer's comment indicates the name refers to a specific, real individual (rather than a generic placeholder), keep that person's actual name. Sample addresses should be translated into a Ukrainian format (street name with вул., city, postal code, Ukraine); leave a real address as-is. Example format: `вул. Лугова, 23, Черкаси`.
 
 ## Punctuation
 
-- **Ukrainian Comma Rules — Common Mistakes to Avoid**: Do not place a comma before "як" or "ніж" in constructions like "(не) більше ніж". Do not split the complex expressions "перш ніж", "після того як", "тому що", "для того щоб" with a comma when the subordinate clause precedes the main clause. Do not use a comma after "наприклад" when it means "а саме".
-  - *Source:* "Перш ніж надсилати повідомлення, заповніть це поле." → *Target:* "Перш ніж надсилати повідомлення, заповніть це поле. (no comma inside "Перш ніж")"
+- **Ukrainian Comma Rules — Common Mistakes to Avoid**: Do not place a comma before "як" or "ніж" in constructions like "(не) більше ніж". Do not split the complex expressions "перш ніж", "після того як", "тому що", "для того щоб" with a comma when the subordinate clause precedes the main clause — `Перш ніж надсилати повідомлення, заповніть це поле.` (no comma inside "перш ніж"). Do not use a comma after "наприклад" when it means "а саме".
 
 - **Ellipsis**: Use single character ellipsis, not three periods.
   - *Source:* "..." → *Target:* "…"
@@ -81,21 +82,21 @@
 ## Grammar
 
 - **Perfective vs. Imperfective Verbs**: Choose perfective verbs for one-time actions and commands (Copy, Paste, Open, Print) and imperfective for repetitive or continuous actions. Buttons and commands should use perfective infinitives; options and settings may use imperfective forms.
-  - *Source:* "Copy (button)" → *Target:* "Скопіювати (perfective)"
-  - *Source:* "Allow While Using App" → *Target:* "Дозволяти за використання (imperfective)"
+  - *Source:* "Copy" (button) → *Target:* "Скопіювати" (perfective)
+  - *Source:* "Allow While Using App" → *Target:* "Дозволяти за використання" (imperfective)
 
 - **Prefer Verbal (Infinitive) Constructions Over Deverbal Nouns**: Ukrainian favors verbs (дієслівність). For command names, checkboxes, button names, links, use the infinitive form rather than deverbal nouns ending in -ння/-ття. Using verbal infinitive constructions improves both readability and idiomatic accuracy.
-  - *Source:* "Save as (button/command)" → *Target:* "Зберегти як (not Збереження)"
-  - *Source:* "Open" → *Target:* "Відкрити (not Відкриття)"
+  - *Source:* "Save as" (button/command) → *Target:* "Зберегти як" (not "Збереження")
+  - *Source:* "Open" → *Target:* "Відкрити" (not "Відкриття")
   - *Source:* "Quit app" → *Target:* "Завершити програму"
 
 ## Interface Elements
 
 - **UI Element Translation Patterns**: Buttons and commands use perfective or imperfective infinitive verbs. Status messages in Present Continuous use action nouns or "триває + noun". Messages requiring action should be as short as possible, avoiding gendered forms and direct pronoun addressing. Titles use nouns or imperatives. The OK button is always written in Latin as "OK".
-  - *Source:* "Sign in (button)" → *Target:* "Увійти"
+  - *Source:* "Sign in" (button) → *Target:* "Увійти"
   - *Source:* "Downloading…" → *Target:* "Викачування…"
   - *Source:* "Searching…" → *Target:* "Триває пошук…"
-  - *Source:* "Export (title)" → *Target:* "Експорт"
+  - *Source:* "Export" (title) → *Target:* "Експорт"
 
 ## Trademarks And Product Names
 
@@ -106,10 +107,10 @@
 ## Terminology
 
 - **Prefer Ukrainian Terms Over Anglicisms**: Use Ukrainian terminology wherever a native equivalent exists and is commonly used in the industry. Borrow English terms only when no adequate Ukrainian equivalent is available.
-  - *Source:* "Link" → *Target:* "Посилання (not Лінк)"
-  - *Source:* "Browser" → *Target:* "Оглядач (not Браузер)"
-  - *Source:* "User" → *Target:* "Користувач (not Юзер)"
-  - *Source:* "Content" → *Target:* "Вміст (not Контент)"
+  - *Source:* "Link" → *Target:* "Посилання" (not "Лінк")
+  - *Source:* "Browser" → *Target:* "Оглядач" (not "Браузер")
+  - *Source:* "User" → *Target:* "Користувач" (not "Юзер")
+  - *Source:* "Content" → *Target:* "Вміст" (not "Контент")
 
 ## Variables
 

@@ -31,7 +31,7 @@
 
 ## Measurements
 
-- **Do Not Convert Measurements**: Do not convert the measurements (e.g., imperial to metric).
+- **Do Not Convert Measurements**: Generally, do not convert the measurements (e.g., imperial to metric).
   - *Source:* "km²" → *Target:* "km²"
 
 ## Names And Addresses
@@ -48,7 +48,7 @@
 
 ## Numerals
 
-- **International Numerals with Indian Grouping**: Keep numerals as international digits (0–9); do not change the numeral system yourself. Group large numbers using the Indian separator system (e.g., 10,00,000).
+- **International Numerals with Indian Grouping**: Keep numerals as international digits (0–9); do not change the numeral system yourself, as whether they ultimately display as international or native is a user setting the translation can't see. Group large numbers using the Indian separator system (e.g., 10,00,000).
   - *Source:* "500000" → *Target:* "5,00,000"
 
 ## Grammar

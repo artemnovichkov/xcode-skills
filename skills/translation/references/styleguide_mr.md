@@ -8,12 +8,10 @@
 ## Tone And Voice
 
 - **Written Colloquial Style — Smart but Casual**: Use a written colloquial Marathi that balances spoken and formal language, following the register of respected newspapers. The tone should be closer to formal than informal but never stiff. Avoid Sanskritized vocabulary and word-for-word translation. The reader should not feel they are reading a translation.
-  - *Source:* "I will show you how to do this task" → *Target:* "मी तुम्हाला हे टास्क कसे करायचे ते दाखवतो. (not कसं करायचं)"
+  - *Source:* "I will show you how to do this task" → *Target:* "मी तुम्हाला हे टास्क कसे करायचे ते दाखवतो." (not "कसं करायचं")
 
 - **Transliterate Only When No Easily Understood Marathi Word Exists**: First look for a Marathi word that the primary and secondary target audience can easily understand. Transliterate the English term only when no such word exists.
-  - *Source:* "configuration
-Install" → *Target:* "कॉंफिगरेशन (not विन्यास)
-इंस्टॉल"
+  - *Source:* "configuration" → *Target:* "कॉंफिगरेशन" (not "विन्यास")
   - *Source:* "Install" → *Target:* "इंस्टॉल"
 
 ## Addressing Users
@@ -42,9 +40,9 @@ Install" → *Target:* "कॉंफिगरेशन (not विन्या�
   - *Source:* "April 22, 2022" → *Target:* "22 एप्रिल 2022"
   - *Source:* "10:18:30 AM" → *Target:* "10:18:30 AM"
 
-## Measurements
+## Measurements and Units
 
-- **Retain Electronic Units in English; Space Between Number and Unit**: Units related to electronics and computing (GB, KB, 1080p) must stay in English. There must be a space between the digit and the unit, matching the source spacing. Do not convert imperial to metric. Follow the latest CLDR release for all other unit representations.
+- **Retain Electronic Units in English; Space Between Number and Unit**: Units related to electronics and computing (GB, KB, 1080p) must stay in English. There must be a space between the digit and the unit, matching the source spacing. Generally, do not convert imperial to metric. Follow the latest CLDR release for all other unit representations.
   - *Source:* "10KB" → *Target:* "10KB"
 
 ## Numerals
@@ -63,7 +61,7 @@ Install" → *Target:* "कॉंफिगरेशन (not विन्या�
 
 - **Add Space Before Colon to Distinguish from Visarga**: A space must be added before the colon (:) in Marathi text to prevent confusion with the Marathi visarga (ः). This space is required when the colon follows a Marathi word. When the colon follows an untranslated English word or number, the space can be omitted. Do not add a space before visarga in native Marathi words.
   - *Source:* "To:" → *Target:* "प्रति :"
-  - *Source:* "Self (visarga)" → *Target:* "स्वतः (no space)"
+  - *Source:* "Self" (visarga) → *Target:* "स्वतः" (no space)
 
 - **Use Curly Single Quotes for UI References**: Always use curly single quotes (‘ ’) rather than straight quotes. Use double curly quotes only for dialogue. Single curly quotes may be added even when not in the source, where grammatical ambiguity would otherwise arise — but minimize their use.
   - *Source:* "Network Configuration Missing Required Key" → *Target:* "नेटवर्क कॉंफिगरेशनमध्ये आवश्यक \u2018की\u2019 उपलब्ध नाही."
@@ -71,10 +69,11 @@ Install" → *Target:* "कॉंफिगरेशन (not विन्या�
 ## Grammar
 
 - **Nuqta Is Not Used in Marathi**: Marathi does not use nuqta (nukta) to denote loan words. As per Maharashtra government guidelines, nuqta may only be used when writing Urdu or Sindhi lines within a Marathi document. All English sounds including f and ph are represented by फ without a nuqta.
-  - *Source:* "phone / forward" → *Target:* "फोन / फॉरवर्ड (not फ़ोन)"
+  - *Source:* "phone" → *Target:* "फोन" (not "फ़ोन")
+  - *Source:* "forward" → *Target:* "फॉरवर्ड"
 
 - **Anuswara Usage and Chandrabindu**: Marathi uses anuswara (ं) to all nasalize sounds. Prefer anuswara over the parsavarn forms exception is वाङ्मय).
-  - *Source:* "Configuration" → *Target:* "कॉंफिगरेशन (not कॉन्फिगरेशन)"
+  - *Source:* "Configuration" → *Target:* "कॉंफिगरेशन" (not "कॉन्फिगरेशन")
   - *Source:* "College" → *Target:* "कॉलेज"
 
 - **No Articles — Do Not Translate 'a/an' as एक**: Marathi has no articles. Do not translate 'a' or 'an' as एक unless omitting it creates a genuinely incomplete sentence. Most sentences translate naturally without an article. Consider using एक only when it is truly necessary for meaning.
@@ -102,9 +101,9 @@ When plural is not marked in the word itself: Reflect the plural meaning through
   - *Source:* "Messages" → *Target:* "संदेश"
 
 - **Button Names in Imperative with Helping Verb**: Buttons must be translated in imperative form using helping verbs like करा or द्या to prevent the translation from reading as a noun. Exception: macOS menu bar items classified as NSMenuItems (Edit, View, Format, Arrange) are translated as nouns. Callout bar items generally add करा.
-  - *Source:* "Edit (button)" → *Target:* "संपादित करा"
+  - *Source:* "Edit" (button) → *Target:* "संपादित करा"
   - *Source:* "Reply" → *Target:* "उत्तर द्या"
-  - *Source:* "Edit (macOS menu bar)" → *Target:* "संपादन (noun)"
+  - *Source:* "Edit" (macOS menu bar) → *Target:* "संपादन" (noun)
 
 ## Variables
 
@@ -125,4 +124,4 @@ When plural is not marked in the word itself: Reflect the plural meaning through
 ## Emoji
 
 - **Emoji**: Try to avoid using prepositions and helping words in Emoji translations unless necessary.
-  - *Source:* "%d black cat emoji " → *Target:* "%d काळी मांजर इमोजी (not %d काळ्या रंगाच्या मांजरीची इमोजी)"
+  - *Source:* "%d black cat emoji" → *Target:* "%d काळी मांजर इमोजी" (not "%d काळ्या रंगाच्या मांजरीची इमोजी")

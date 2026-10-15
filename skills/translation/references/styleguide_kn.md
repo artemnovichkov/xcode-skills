@@ -7,8 +7,7 @@
 
 ## Abbreviations
 
-- **Translate Abbreviations to Full Form; Abbreviate Only Under Space Constraint**: Prefer translating abbreviations to their full Kannada form. Abbreviate only when space restrictions make the full form impossible. Use a period after abbreviated terms. Keep abbreviated country names (UAE, UK, etc.) in English. Date/time abbreviations follow CLDR entries.
-  - *Source:* "No." → *Target:* "ಸಂಖ್ಯೆ" (full form) / "ಸಂ." (space-restricted)
+- **Prefer Full Kannada Forms**: Keep the full Kannada form by default, spelling out abbreviations even when the source is abbreviated; abbreviate only when the translation is found to be clipped or truncated. When abbreviating, use a Kannada abbreviation with a period after the abbreviated term. Keep abbreviated country names (UAE, UK, etc.) in English. Date/time abbreviations follow CLDR entries.
   - *Source:* "Dept." → *Target:* "ವಿಭಾಗ"
 
 ## Acronyms
@@ -36,7 +35,7 @@
 
 ## General Advice
 
-- **Prioritize Readability and Conciseness in Space-Constrained UI**: Kannada translations are generally longer than their sources. In iOS and watchOS contexts, be as concise as possible to avoid truncation. Suppress articles where safe, choose shorter verb variants, and avoid verbose constructions. Abbreviation is the last resort.
+- **Prioritize Readability and Conciseness in Space-Constrained UI**: Kannada translations are generally longer than their sources. In iOS and watchOS contexts, be as concise as possible to avoid truncation. Suppress articles where safe, choose shorter verb variants, and avoid verbose constructions.
   - *Source:* "%@ sent you an email." → *Target:* "%@ ಅವರು ನಿಮಗೆ ಇಮೇಲ್ ಅನ್ನು ಕಳುಹಿಸಿದ್ದಾರೆ." (full) / "%@, ನಿಮಗೆ ಇಮೇಲ್ ಕಳುಹಿಸಿದ್ದಾರೆ" (space-restricted)
 
 ## Grammar
@@ -110,7 +109,9 @@
   - *Source:* "Carrier" → *Target:* "ನೆಟ್‌ವರ್ಕ್ ಪೂರೈಕೆದಾರರು"
   - *Source:* "Carrier Network" → *Target:* "ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್"
 
-## Measurements
+## Measurements and Units
+
+- **Do Not Convert Measurement Units**: Generally, do not convert measurements (e.g. imperial to metric) to local measurements when they appear in sentences or phrases — for example, do not convert inches to centimeters.
 
 - **Keep Electronic/Computer Units in English; Translate Expanded Forms**: Units related to electronics and computing (MB, GB, TB, 720p, 4K) should remain in English as per the source. For other units with expanded Kannada equivalents (e.g., kilometer → ಕಿಲೋಮೀಟರ್), translate the full form and keep the abbreviation in English in parentheses.
   - *Source:* "Kilometer (km)" → *Target:* "ಕಿಲೋಮೀಟರ್ (km)"
@@ -118,11 +119,11 @@
 
 ## Numerals
 
-- **Use International Numerals; Spell Out Numbers in Context**: The system default for Kannada is international numerals. Use numerals (420) in scientific, technical, statistical, and UI contexts. Spell out numbers in full (ನಾಲ್ಕು ನೂರಾ ಇಪ್ಪತ್ತು) when appropriate to the prose context. Follow the source format as a guide.
+- **Use International Numerals; Spell Out Numbers in Context**: The current default for Kannada is international numerals; keep the source's digits and do not convert them to native Kannada numerals, as whether they ultimately display as international or native is a user setting the translation can't see. Use numerals (420) in scientific, technical, statistical, and UI contexts. Spell out numbers in full (ನಾಲ್ಕು ನೂರಾ ಇಪ್ಪತ್ತು) when appropriate to the prose context. Follow the source format as a guide.
   - *Source:* "10th" → *Target:* "10ನೇ"
   - *Source:* "Ten" → *Target:* "ಹತ್ತು"
 
-- **Apply Indian Comma Grouping System for Large Numbers**: The Indian comma system must be used for large numbers - commas are placed after thousands, then lakhs and crores (e.g. 10,00,000 not 1,000,000). Hard-coded numbers must always be in international numeral form (0-9). Always leave a space between a number and the following word or unit.
+- **Apply Indian Comma Grouping System for Large Numbers**: The Indian comma system must be used for large numbers - commas are placed after thousands, then lakhs and crores (e.g. 10,00,000 not 1,000,000). Always leave a space between a number and the following word or unit.
   - *Source:* "1,000,000 songs" → *Target:* "10,00,000 ಹಾಡುಗಳು"
 
 ## Special Characters

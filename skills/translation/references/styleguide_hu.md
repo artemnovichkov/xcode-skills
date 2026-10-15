@@ -55,9 +55,8 @@
 
 ## Measurements
 
-- **Measurement Units and Spacing**: Do not convert imperial measurements to metric. Always write a space between a quantity and its unit symbol, and never follow the unit with a period: '50 Hz', '12 m', '23 °C'. Exception: the percent sign (%) and degree sign (°) require no space: '99%', '45°-kal'.
+- **Measurement Units and Spacing**: Generally, do not convert imperial measurements to metric. Always write a space between a quantity and its unit symbol, and never follow the unit with a period: '50 Hz', '12 m', '23 °C'. Exception: the percent sign (%) and degree sign (°) require no space: '99%', '45°-kal'.
   - *Source:* "50 Hz" → *Target:* "50 Hz"
-  - *Source:* "0.99" → *Target:* "0.99"
 
 ## Numerals
 

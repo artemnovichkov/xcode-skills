@@ -33,13 +33,10 @@
 - **Verb-Only Strings Use the Infinitive**: Single-word button labels, menu items, and other standalone verb strings should almost always be translated in the infinitive. Exceptions apply when the string is a runtime-composed fragment (see Variables section).
   - *Source:* "Open / Close / Play / Never use font sizes smaller than…" → *Target:* "Otvoriť / Zatvoriť / Prehrať / Nepoužívať písmo menšie ako…"
 
-- **Plural Agreement in Software Strings**: Slovak has more plural forms than English. When the count feeds a numerical format specifier (%lld, %d), translate each plural case directly — the String Catalog's plural variation supplies the correct form; do not work around it. A workaround is needed only when the count arrives as a **pre-formatted number interpolated as a non-numerical %@** (so plural categories can't apply): place the variable after a colon (preferred, shorter) or inside brackets, keep the item name in the plural nominative, and report back that the string needs a numerical placeholder for correct plural agreement (a code fix in the source).
-  - *Source:* "%@ items" (where %@ is a pre-formatted count) → *Target:* "Položky: %@"
-
 ## Abbreviations
 
-- **Avoid Abbreviations in UI Strings**: Do not shorten words through abbreviations when a software string is too long. Rephrase the string instead. Never use more than one abbreviation per string. The abbreviation «Autom.» is the only accepted short form for "Automatic" (do not use "Automat.").
-  - *Source:* "Automatic" → *Target:* "Autom."
+- **Avoid Abbreviations in UI Strings**: Keep the full form by default, and never use more than one abbreviation per string; abbreviate only when the source itself uses an abbreviation or the translation is found to be clipped or truncated. When abbreviating, use a corresponding Slovak abbreviation. Use an established standardized short form where one exists — «Autom.» is always used for "Automatic" (never «Automat.»).
+  - *Source:* "e.g." → *Target:* "napr."
 
 ## Acronyms
 
@@ -58,7 +55,7 @@
 
 ## Measurements
 
-- **Do Not Convert Imperial Measurements**: Do not convert units (e.g. inches to centimeters). Units in Slovak are written without a full stop and are separated from the number by a space. The only exceptions are degrees Celsius/Fahrenheit and angles.
+- **Do Not Convert Imperial Measurements**: Generally, do not convert units (e.g. inches to centimeters). Units in Slovak are written without a full stop and are separated from the number by a space. Degrees Celsius/Fahrenheit and angles are the one exception to using a space — write them closed up to the number (25°C, 45°).
   - *Source:* "2 GB / 30 min / 25 %" → *Target:* "2 GB / 30 min / 25 %"
 
 ## Names And Addresses

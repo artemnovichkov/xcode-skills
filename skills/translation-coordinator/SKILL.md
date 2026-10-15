@@ -2,8 +2,8 @@
 description: "Coordinates translation of an Xcode project or its String Catalogs (.xcstrings) into other languages. This is the main skill to activate when asked to work on translating strings, adding languages or working with .xcstrings files. Handles the full workflow: preparing the project for a new language, fetching untranslated strings, delegating translation work, and verifying results."
 displayName: "Coordinate Translation"
 sfSymbolName: globe
-name: translation-coordinator
 user-invocable: false
+name: translation-coordinator
 ---
 # Localization Coordinator
 
@@ -54,7 +54,9 @@ If you have any string keys that represent an app name (e.g. `CFBundleDisplayNam
 
 ### 5. Verify Results
 
-Once all sub-agents have completed their tasks, use the `StringCatalogRead` tool to verify the strings you requested to translate are translated. 
+Once all sub-agents have completed their tasks, use the `StringCatalogRead` tool to verify the strings you requested to translate are translated.
+
+Collect anything the sub-agents flagged as needing a code change. Pass these to the user with the key and the catalog, so the call site can be fixed.
 
 
 # Tool Reference

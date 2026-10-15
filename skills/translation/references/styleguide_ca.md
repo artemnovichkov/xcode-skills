@@ -16,7 +16,7 @@
 
 ## Abbreviations
 
-- **Spell Out Abbreviations Where Space Allows**: Catalan uses abbreviations far less frequently than English. Spell out fully whenever space is not a constraint. When abbreviating is unavoidable, use only well-known Catalan abbreviations that end with a period and are cut after a consonant.
+- **Avoid Abbreviations**: Catalan uses abbreviations far less frequently than English, so keep the full spelled-out form by default; abbreviate only when the source itself uses an abbreviation or the translation is found to be clipped or truncated. When abbreviating, use only well-known Catalan abbreviations that don't introduce ambiguity — ending with a period and cut after a consonant.
   - *Source:* "e.g." → *Target:* "p. ex."
 
 ## Acronyms
@@ -36,7 +36,7 @@
 
 ## Addresses
 
-- **Catalan Address Format**: When localizing postal addresses, follow Catalan conventions: translate generic street types ("Main Street" → "Carrer Major", "Avenue" → "Avinguda") and use Catalan order (street name and number, then postal code and locality, then province). Do not leave English sample data in production strings. Example format: `Carrer Major, 123, Localitat, CP Província`.
+- **Catalan Address Format**: When localizing postal addresses, follow Catalan conventions: translate generic street types ("Main Street" → "Carrer Major", "Avenue" → "Avinguda") and use Catalan order (street name and number, then postal code and locality, then province). This applies to a generic sample address; leave a real address as-is. Do not leave English sample data in production strings. Example format: `Carrer Major, 123, Localitat, CP Província`.
 
 ## Interface Elements
 
@@ -143,8 +143,8 @@
 - **Quotation marks**: Use Catalan curly double quotation marks “ and ” around multi-word UI items when they are referenced rather than used descriptively. Quotation marks are not necessary for app names, email addresses, utility names, or operating-system update names, and are not used when UI options are referenced through a path with ">".
   - *Source:* "Click Agree or Learn More." → *Target:* "Fes clic a \u201CAccepta\u201D o a \u201CMés informació\u201D."
 
-- **Units**: Do not convert imperial measurements to metric. When the English measurement is purely illustrative (a rounded ballpark figure rather than a precise spec), substitute a comparable rounded Catalan figure instead of a literal conversion.
-  - *Source:* "Hold iPhone 10 to 20 inches from your face" → *Target:* "Mantén l\u2019iPhone a una distància de 10 a 20 polzades de la cara."
+- **Units**: Generally, do not convert measurements to local standards (for example, imperial to metric system). However, when the source measurements are illustrative, they should be localized, and Catalan measurements must be rounded.
+  - *Source:* "Hold iPhone 10 to 20 inches from your face" → *Target:* "Mantén l\u2019iPhone a una distància de 25 a 50 cm de la teva cara"
 
 - **Spacing**: There must be a non-breaking space between the number and the unit symbol.
   - *Source:* "100% zoom level" → *Target:* "Nivell del zoom del 100\u00A0%"
@@ -172,8 +172,8 @@
   - *Source:* "iPhone Restricted by Carrier" → *Target:* "iPhone restringit per l\u2019operador"
   - *Source:* "iMac (24-inch, 2024)" → *Target:* "iMac (24 polzades, 2024)"
 
-- **Numbers**: Use period as thousand separator.
-  - *Source:* "2000 Fitness+ Meditations" → *Target:* "2.000 meditacions del Fitness+"
+- **Numbers**: Use a period as the thousands separator for numbers with five or more digits. Four-digit numbers take no separator.
+  - *Source:* "2000 Fitness+ Meditations" → *Target:* "2000 meditacions del Fitness+"
   - *Source:* "Maximum folder size 10,000 items" → *Target:* "Mida màxima de la carpeta: 10.000 ítems"
 
 - **Decimal separator**: Use comma as a separator for decimal numbers. Exact numbers do not need decimals.

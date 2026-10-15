@@ -29,14 +29,14 @@
   - *Source:* "Apple will send you an email." → *Target:* "Apple की तरफ़ से एक ईमेल भेजा जाएगा।"
 
 - **Nuqta Usage**: Nuqta (a dot below certain consonants) must be used for loan words from Arabic, Persian, Urdu, and English where it is present in the source language, particularly to distinguish फ (pha) from फ़ (fa) and ज (ja) from ज़ (za). When in doubt, consult Rekhta Dictionary.
-  - *Source:* "file" → *Target:* "फ़ाइल (not फाइल)"
-  - *Source:* "sadness (Urdu: ग़म)" → *Target:* "ग़म (not गम)"
+  - *Source:* "file" → *Target:* "फ़ाइल" (not "फाइल")
+  - *Source:* "sadness" → *Target:* "ग़म" (not "गम")
 
 - **Chandrabindu vs. Anuswara**: Chandrabindu should be used wherever it avoids ambiguity between homonyms and reflects the correct pronunciation. Do not substitute anuswara for chandrabindu when they carry different sounds.
-  - *Source:* "Mother" → *Target:* "माँ (not मां)"
+  - *Source:* "Mother" → *Target:* "माँ" (not "मां")
 
 - **Use of Anuswar over Panchamakshar**: Use of Anuswar is preferred over Panchamakshar
-  - *Source:* "End" → *Target:* "अंत (not अन्त)"
+  - *Source:* "End" → *Target:* "अंत" (not "अन्त")
 
 - **Pronouns: 'Your' and 'Our' in the Same String**: When 'you/your' appear together in one string, translate 'your' as अपने (not आपके). Similarly, when 'we/our' appear together, translate 'our' as अपने (not हमारे).
   - *Source:* "You can see more details in the Health app on your iPhone." → *Target:* "अपने iPhone पर सेहत ऐप में आप अधिक विवरण देख सकते हैं।"
@@ -49,7 +49,7 @@
 
 - **Transliterate Technical Jargon**: Technical and software terms that are widely known in English should be transliterated rather than awkwardly translated. If a Hindi equivalent exists but is archaic or unclear (e.g. कलन विधि for 'Algorithm'), use the transliteration instead.
   - *Source:* "Installation" → *Target:* "इंस्टॉलेशन"
-  - *Source:* "Algorithm" → *Target:* "एल्गोरिदम (not कलन विधि)"
+  - *Source:* "Algorithm" → *Target:* "एल्गोरिदम" (not "कलन विधि")
 
 - **Use British English as Transliteration Base**: When transliterating from English, prefer British or Indian English pronunciations over American English. Use Mobile instead of Cellular, Cycling instead of Biking. However, where American forms dominate in India (e.g. ATM, not Cashpoint), follow popular usage.
   - *Source:* "Cellular" → *Target:* "मोबाइल"
@@ -73,9 +73,13 @@
   - *Source:* "7:15 am" → *Target:* "पू 7:15"
   - *Source:* "7:15 pm" → *Target:* "अ 7:15"
 
+## Measurements
+
+- **Do Not Convert Measurement Units**: Generally, keep measurements in the units used in the source — do not convert inches to centimeters or miles to kilometers.
+
 ## Numerals
 
-- **Indian Numbering System for Hardcoded Numbers**: Use international (Arabic) numerals, not Devanagari digits, for hardcoded numbers. Apply the Indian grouping system with commas: the first comma appears after three digits, then every two digits (e.g. 10,00,000 not 1,000,000).
+- **Indian Numbering System for Hardcoded Numbers**: Keep hardcoded numbers as international (Arabic) digits and do not convert them to Devanagari digits, as whether they ultimately display as international or native is a user setting the translation can't see. Apply the Indian grouping system with commas: the first comma appears after three digits, then every two digits (e.g. 10,00,000 not 1,000,000).
   - *Source:* "1,000,000 songs" → *Target:* "10,00,000 गाने"
 
 - **Ordinal Numbers**: Write ordinal numbers 1st–9th as Hindi words (पहला, दूसरा … नवाँ). From 10th onwards, append वाँ to the numeral (10वाँ, 11वाँ).
@@ -113,9 +117,7 @@
 
 ## Names And Addresses
 
-- **Use Caste-Neutral Indian Names**: Replace generic Western placeholder names (Jane Doe, John Doe) with common Indian names that are inclusive across religions, regions, and castes. Avoid surnames that reveal a specific caste or community.
-  - *Source:* "Jane Doe" → *Target:* "प्रिया कुमारी"
-  - *Source:* "John Doe" → *Target:* "साहिल कुमार"
+- **Use Caste-Neutral Indian Names**: Replace generic placeholder names (Jane Doe, John Doe) with common Indian names that are inclusive across religions, regions, and castes; avoid surnames that reveal a specific caste or community. If the source or the developer's comment indicates the name refers to a specific, real individual (rather than a generic placeholder), keep that person's actual name — transliterating it into Devanagari if it appears in Latin — instead of substituting one.
 
 ## Diversity And Inclusion
 
@@ -123,4 +125,4 @@
   - *Source:* "Priest" → *Target:* "पुजारी"
 
 - **People-First Language for Disability**: When referring to people with disabilities, describe the person first and the disability second. Avoid collective labels like 'the blind'; prefer 'people who are blind or have low vision'.
-  - *Source:* "The blind" → *Target:* "दृष्टिहीन व्यक्ति or जिन लोगों को कम दिखाई देता है (not अँधा)"
+  - *Source:* "The blind" → *Target:* "दृष्टिहीन व्यक्ति" or "जिन लोगों को कम दिखाई देता है" (not "अँधा")
